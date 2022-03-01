@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using Programming.Model;
 using Programming.View;
@@ -17,13 +11,12 @@ namespace Programming
         public MainForm()
         {
             InitializeComponent();
-        }
-
-        private void MainForm_Load(object sender, EventArgs e)
-        {
             EnumsListBox.DataSource = Enum.GetValues(typeof(Enums));
+            SeasonComboBox.DataSource = Enum.GetValues(typeof(Season));
             EnumsListBox.SelectedIndex = 0;
         }
+
+    
 
         private void EnumsListBox_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -52,7 +45,8 @@ namespace Programming
 
         private void ValuesListBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            IntTextbox.Text = ValuesListBox.SelectedItem.ToString();
+            var item = ValuesListBox.SelectedItem;
+            IntTextBox.Text = ((int)item).ToString();
         }
 
         private void ParseButton_Click(object sender, EventArgs e)
@@ -60,11 +54,35 @@ namespace Programming
             Weekday day;
             if (Enum.TryParse(ValueParsing.Text, out day))
             {
-                ParsingFlag.Text = $"This day of week ({day.ToString()} = {(int)day}).";
+                ParsingFlag.Text = $"This day of week ({day.ToString()} = {(int)day+1}).";
             }
             else
             {
-                ParsingFlag.Text = "There isn't such day in week!";
+                ParsingFlag.Text = "Is it the exact day of the week? o_0";
+            }
+        }
+
+        private void SeasonButton_Click(object sender, EventArgs e)
+        {
+            switch ((Season)SeasonComboBox.SelectedItem)
+            {
+                case Season.Winter:
+                    BackColor = Color.LightBlue;
+                    MessageBox.Show("Br-r-r! Coldly!", "Message", MessageBoxButtons.OKCancel);
+                    break;
+                case Season.Spring:
+                    BackColor = Color.LightGreen;
+                    break;
+                case Season.Summer:
+                    BackColor = Color.Green;
+                    MessageBox.Show("Hooray! Sun!", "Message", MessageBoxButtons.OKCancel);
+                    break;
+                case Season.Autumn:
+                    BackColor = Color.Orange;
+                    break;
+                default:
+                    MessageBox.Show("Not selected season!", "Warning!", MessageBoxButtons.OKCancel);
+                    break;
             }
         }
     }
