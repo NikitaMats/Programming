@@ -1,4 +1,4 @@
-﻿namespace Task2.Model
+﻿namespace Programming.Model
 {
     public enum Smartphones
     {
