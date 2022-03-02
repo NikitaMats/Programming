@@ -3,7 +3,6 @@ using System.Drawing;
 using System.Windows.Forms;
 using Programming.Model;
 
-
 namespace Programming.View
 {
     public partial class MainForm : Form
@@ -15,8 +14,6 @@ namespace Programming.View
             SeasonComboBox.DataSource = Enum.GetValues(typeof(Season));
             EnumsListBox.SelectedIndex = 0;
         }
-
-    
 
         private void EnumsListBox_SelectedIndexChanged(object sender, EventArgs e)
         {
