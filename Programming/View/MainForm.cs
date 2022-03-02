@@ -2,9 +2,9 @@
 using System.Drawing;
 using System.Windows.Forms;
 using Programming.Model;
-using Programming.View;
 
-namespace Programming
+
+namespace Programming.View
 {
     public partial class MainForm : Form
     {

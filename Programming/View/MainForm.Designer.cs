@@ -1,4 +1,4 @@
-﻿namespace Programming
+﻿namespace Programming.View
 {
     partial class MainForm
     {
@@ -32,6 +32,7 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.SeasonGroupBox = new System.Windows.Forms.GroupBox();
+            this.SeasonButton = new System.Windows.Forms.Button();
             this.SeasonComboBox = new System.Windows.Forms.ComboBox();
             this.SeasonLabel = new System.Windows.Forms.Label();
             this.WeekdayGroupBox = new System.Windows.Forms.GroupBox();
@@ -47,7 +48,6 @@
             this.ValuesListBox = new System.Windows.Forms.ListBox();
             this.EnumsListBox = new System.Windows.Forms.ListBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.SeasonButton = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.SeasonGroupBox.SuspendLayout();
@@ -91,6 +91,16 @@
             this.SeasonGroupBox.TabIndex = 2;
             this.SeasonGroupBox.TabStop = false;
             this.SeasonGroupBox.Text = "Season Handle";
+            // 
+            // SeasonButton
+            // 
+            this.SeasonButton.Location = new System.Drawing.Point(225, 52);
+            this.SeasonButton.Name = "SeasonButton";
+            this.SeasonButton.Size = new System.Drawing.Size(75, 28);
+            this.SeasonButton.TabIndex = 6;
+            this.SeasonButton.Text = "GO!";
+            this.SeasonButton.UseVisualStyleBackColor = true;
+            this.SeasonButton.Click += new System.EventHandler(this.SeasonButton_Click);
             // 
             // SeasonComboBox
             // 
@@ -185,9 +195,9 @@
             this.LabelInt.AutoSize = true;
             this.LabelInt.Location = new System.Drawing.Point(381, 22);
             this.LabelInt.Name = "LabelInt";
-            this.LabelInt.Size = new System.Drawing.Size(56, 16);
+            this.LabelInt.Size = new System.Drawing.Size(59, 16);
             this.LabelInt.TabIndex = 4;
-            this.LabelInt.Text = "Int value";
+            this.LabelInt.Text = "Int value:";
             // 
             // LabelValue
             // 
@@ -245,16 +255,6 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "????";
             this.tabPage2.UseVisualStyleBackColor = true;
-            // 
-            // SeasonButton
-            // 
-            this.SeasonButton.Location = new System.Drawing.Point(225, 52);
-            this.SeasonButton.Name = "SeasonButton";
-            this.SeasonButton.Size = new System.Drawing.Size(75, 28);
-            this.SeasonButton.TabIndex = 6;
-            this.SeasonButton.Text = "GO!";
-            this.SeasonButton.UseVisualStyleBackColor = true;
-            this.SeasonButton.Click += new System.EventHandler(this.SeasonButton_Click);
             // 
             // MainForm
             // 
