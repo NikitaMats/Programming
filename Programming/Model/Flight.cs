@@ -8,8 +8,8 @@ namespace Programming.Model
 {
     internal class Flight
     {
-        public string DeparturePoint;
-        public string Destination;
-        public int FlightTimeMin;          //В минутах
+        private string DeparturePoint;
+        private string Destination;
+        private int FlightTimeMinute;          //В минутах
     }
 }
