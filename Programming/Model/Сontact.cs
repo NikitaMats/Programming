@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace Programming.Model
 {
-    internal class Time
+    internal class Сontact
     {
-        private int Hour;
-        private int Minute;
-        private int Second;
+        private string Name;
+        private string Sername;
+        private int Number;
     }
 }

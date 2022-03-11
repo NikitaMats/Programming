@@ -6,10 +6,11 @@ using System.Threading.Tasks;
 
 namespace Programming.Model
 {
-    internal class Time
+    internal class Song
     {
-        private int Hour;
-        private int Minute;
-        private int Second;
+        private int Id;
+        private string Name;
+        private string Author;
+        private double Duration;
     }
 }

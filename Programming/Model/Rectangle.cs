@@ -8,8 +8,8 @@ namespace Programming.Model
 {
     internal class Rectangle
     {
-        private double length;
-        private double width;
-        private string color;
+        private double Length;
+        private double Width;
+        private string Color;
     }
 }

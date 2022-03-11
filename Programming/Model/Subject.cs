@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace Programming.Model
 {
-    internal class Time
+    internal class Subject
     {
-        private int Hour;
-        private int Minute;
-        private int Second;
+        private string Lesson;
+        private string Instructor;
+        private string Time;
     }
 }
