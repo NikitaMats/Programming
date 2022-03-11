@@ -46,6 +46,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Model\Time.cs" />
+    <Compile Include="Model\Film.cs" />
+    <Compile Include="Model\Flight.cs" />
+    <Compile Include="Model\Rectangle.cs" />
     <Compile Include="View\Enums.cs" />
     <Compile Include="View\MainForm.cs">
       <SubType>Form</SubType>
@@ -53,12 +57,12 @@
     <Compile Include="View\MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Model\Colors.cs" />
-    <Compile Include="Model\EducationForm.cs" />
-    <Compile Include="Model\Genre.cs" />
-    <Compile Include="Model\Season.cs" />
-    <Compile Include="Model\Smartphones.cs" />
-    <Compile Include="Model\Weekday.cs" />
+    <Compile Include="Model\Enums\Colors.cs" />
+    <Compile Include="Model\Enums\EducationForm.cs" />
+    <Compile Include="Model\Enums\Genre.cs" />
+    <Compile Include="Model\Enums\Season.cs" />
+    <Compile Include="Model\Enums\Smartphones.cs" />
+    <Compile Include="Model\Enums\Weekday.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="View\MainForm.resx">
