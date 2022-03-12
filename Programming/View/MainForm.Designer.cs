@@ -104,6 +104,7 @@
             // 
             // SeasonComboBox
             // 
+            this.SeasonComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.SeasonComboBox.FormattingEnabled = true;
             this.SeasonComboBox.Location = new System.Drawing.Point(9, 53);
             this.SeasonComboBox.Name = "SeasonComboBox";
