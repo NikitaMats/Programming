@@ -6,10 +6,35 @@ using System.Threading.Tasks;
 
 namespace Programming.Model
 {
-    internal class Сontact
+    public class Сontact
     {
-        private string Name;
-        private string Sername;
-        private int Number;
+        private string _number;
+
+        public Сontact()
+        { }
+
+        public Сontact(string name, string sername, string number)
+        {
+            Name = name;
+            Sername = sername;
+            Number = number;
+        }
+
+        public string Number
+        {
+            get 
+            {
+                return _number; 
+            }
+            set 
+            {
+                if (value.Length != 11) throw new ArgumentException();
+                if (int .TryParse(value, out int num)==false) throw new ArgumentException();
+                _number = value;
+            }
+        }
+        public string Name { get; set; }
+        public string Sername { get; set; }
+        
     }
 }
