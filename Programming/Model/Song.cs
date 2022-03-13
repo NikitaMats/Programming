@@ -42,7 +42,7 @@ namespace Programming.Model
             }
             set
             {
-                if (value < 0) throw new ArgumentException();
+                if (value <= 0) throw new ArgumentException();
                 _durationMinute = value;
             }
         }
