@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Programming.Model
 {
-    internal class Song
+    public class Song
     {
         private int _id;
         private int _durationMinute;

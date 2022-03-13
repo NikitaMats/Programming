@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Programming.Model
 {
-    internal class Rectangle
+    public class Rectangle
     {
         private double _length;
         private double _width;
