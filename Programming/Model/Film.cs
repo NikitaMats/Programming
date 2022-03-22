@@ -9,11 +9,17 @@ namespace Programming.Model
     public class Film
     {
         private int _durationMinute;
-
+        /// <summary>
+        /// 
+        /// </summary>
         private int _releaseYear;
-
+        /// <summary>
+        /// 
+        /// </summary>
         private double _rating;
-
+        /// <summary>
+        /// 
+        /// </summary>
         public Film()
         { }
 

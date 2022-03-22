@@ -82,6 +82,10 @@ namespace Programming.View
                     break;
             }
         }
-        
+
+        private void RectangleListBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
