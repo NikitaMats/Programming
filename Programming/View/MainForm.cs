@@ -14,7 +14,7 @@ namespace Programming.View
         private Film[] _movies;
         private Film _currentMovie;
 
-        private int FindMaxRectangle(Rectangle[] rectangles)
+        private int FindRectangleWithMaxWidth(Rectangle[] rectangles)
         {
             int indexMaxWide = 0;
             double max = 0;
@@ -57,18 +57,18 @@ namespace Programming.View
             {
                 length = Math.Round(rand.NextDouble() * 100, 1);
                 width = Math.Round(rand.NextDouble() * 100, 1);
-                _rectangles[i] = new Rectangle(length, width, _colors[i]);
+                _rectangles[i] = new Rectangle(length, width, _colors[1]);
                 RectangleListBox.Items.Add("Rectangle " + (i + 1));
             }
             RectangleListBox.SelectedIndex = 0;
 
             _movies = new Film[5]
             {
-                new Film("Tenet", 2, 2020, "Action", 8),
-                new Film("The Gentlemen", 2, 2019, "Criminal", 9),
-                new Film("Interstellar", 3, 2014, "Science fiction", 7),
-                new Film("The Martian", 2, 2015, "Science fiction", 7.7),
-                new Film("Stalk", 2, 2019, "с++", 7)
+                new Film("The Green Mile", 189, 1999, "Drama", 9.1),
+                new Film("Intouchables", 112, 2011, "Drama", 8.8),
+                new Film("Interstellar", 169, 2014, "Science fiction", 7),
+                new Film("Back to the Future", 116, 1985, "Science fiction", 8.7),
+                new Film("WALL·E", 98, 2008, "Сartoon", 8.6),
             };
 
             foreach (var movie in _movies)
@@ -188,7 +188,7 @@ namespace Programming.View
 
         private void FindRectangleButton_Click(object sender, EventArgs e)
         {
-            int indexFindRectangle = FindMaxRectangle(_rectangles);
+            int indexFindRectangle = FindRectangleWithMaxWidth(_rectangles);
             RectangleListBox.SelectedIndex = indexFindRectangle;
         }
 
