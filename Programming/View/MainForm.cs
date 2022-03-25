@@ -14,6 +14,34 @@ namespace Programming.View
         private Film[] _movies;
         private Film _currentMovie;
 
+        private int FindMaxRectangle(Rectangle[] rectangles)
+        {
+            int indexMaxWide = 0;
+            double max = 0;
+            for (int i = 0; i < 5; i++)
+            {
+                if (rectangles[i].Width > max)
+                {
+                    max = rectangles[i].Width;
+                    indexMaxWide = i;
+                }
+            }
+            return indexMaxWide;
+        }
+        private int FindMaxRatingFilm(Film[] movies)
+        {
+            int indexMaxRating = 0;
+            double max = 0;
+            for (int i = 0; i < 5; i++)
+            {
+                if (movies[i].Rating > max)
+                {
+                    max = movies[i].Rating;
+                    indexMaxRating = i;
+                }
+            }
+            return indexMaxRating;
+        }
         public MainForm()
         {
             InitializeComponent();
@@ -120,7 +148,114 @@ namespace Programming.View
 
         private void RectangleListBox_SelectedIndexChanged(object sender, EventArgs e)
         {
+            var selectedRectangle = RectangleListBox.SelectedIndex;
+            _currentRectangle = _rectangles[selectedRectangle];
+            LenghtTextBox.Text = _currentRectangle.Length.ToString();
+            WidthTextBox.Text = _currentRectangle.Width.ToString();
+            ColorTextBox.Text = _currentRectangle.Color;
+        }
 
+        private void LenghtTextBox_TextChanged(object sender, EventArgs e)
+        {
+            LenghtTextBox.BackColor = ColorTranslator.FromHtml("Window");
+            try
+            {
+                _currentRectangle.Length = Convert.ToDouble(LenghtTextBox.Text);
+            }
+            catch
+            {
+                LenghtTextBox.BackColor = ColorTranslator.FromHtml("LightPink");
+            }
+        }
+
+        private void WidthTextBox_TextChanged(object sender, EventArgs e)
+        {
+            WidthTextBox.BackColor = ColorTranslator.FromHtml("Window");
+            try
+            {
+                _currentRectangle.Width = Convert.ToDouble(WidthTextBox.Text);
+            }
+            catch
+            {
+                WidthTextBox.BackColor = ColorTranslator.FromHtml("LightPink");
+            }
+        }
+
+        private void ColorTextBox_TextChanged(object sender, EventArgs e)
+        {
+            _currentRectangle.Color = ColorTextBox.Text;
+        }
+
+        private void FindRectangleButton_Click(object sender, EventArgs e)
+        {
+            int indexFindRectangle = FindMaxRectangle(_rectangles);
+            RectangleListBox.SelectedIndex = indexFindRectangle;
+        }
+
+        private void FilmsListBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            var selectedMovie = FilmsListBox.SelectedIndex;
+            _currentMovie = _movies[selectedMovie];
+            FilmNameTextBox.Text = _currentMovie.Name;
+            FilmGenreTextBox.Text = _currentMovie.Genre;
+            FilmDurationTextBox.Text = _currentMovie.DurationMinute.ToString();
+            FilmReleaseTextBox.Text = _currentMovie.ReleaseYear.ToString();
+            FilmRatingTextBox.Text = _currentMovie.Rating.ToString();
+        }
+
+        private void FilmNameTextBox_TextChanged(object sender, EventArgs e)
+        {
+            _currentMovie.Name = FilmNameTextBox.Text;
+        }
+
+        private void FilmGenreTextBox_TextChanged(object sender, EventArgs e)
+        {
+            _currentMovie.Genre = FilmGenreTextBox.Text;
+        }
+
+        private void FimDuretionTextBox_TextChanged(object sender, EventArgs e)
+        {
+            FilmDurationTextBox.BackColor = ColorTranslator.FromHtml("Window");
+            try
+            {
+                _currentMovie.DurationMinute = Convert.ToInt32(FilmDurationTextBox.Text);
+            }
+            catch
+            {
+                FilmDurationTextBox.BackColor = ColorTranslator.FromHtml("LightPink");
+            }
+        }
+
+        private void FilmReleaseTextBox_TextChanged(object sender, EventArgs e)
+        {
+            FilmReleaseTextBox.BackColor = ColorTranslator.FromHtml("Window");
+            try
+            {
+                _currentMovie.ReleaseYear = Convert.ToInt32(FilmReleaseTextBox.Text);
+            }
+            catch
+            {
+                FilmReleaseTextBox.BackColor = ColorTranslator.FromHtml("LightPink");
+            }
+        }
+
+        private void FilmRatingTextBox_TextChanged(object sender, EventArgs e)
+        {
+            FilmRatingTextBox.BackColor = ColorTranslator.FromHtml("Window");
+            try
+            {
+                _currentMovie.Rating = Convert.ToDouble(FilmRatingTextBox.Text);
+            }
+            catch
+            {
+                FilmRatingTextBox.BackColor = ColorTranslator.FromHtml("LightPink");
+            }
+        }
+
+        private void FindFilmButton_Click(object sender, EventArgs e)
+        {
+            int indexFindMovie = FindMaxRatingFilm(_movies);
+            FilmsListBox.SelectedIndex = indexFindMovie;
         }
     }
 }
