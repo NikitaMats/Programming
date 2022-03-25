@@ -2,17 +2,52 @@
 using System.Drawing;
 using System.Windows.Forms;
 using Programming.Model;
+using Rectangle = Programming.Model.Rectangle;
 
 namespace Programming.View
 {
     public partial class MainForm : Form
     {
+        private string[] _colors = { "Red", "Black", "Green", "Yellow", "Orange" };
+        private Rectangle[] _rectangles;
+        private Rectangle _currentRectangle;
+        private Film[] _movies;
+        private Film _currentMovie;
+
         public MainForm()
         {
             InitializeComponent();
+            //first page
             EnumsListBox.DataSource = Enum.GetValues(typeof(Enums));
             SeasonComboBox.DataSource = Enum.GetValues(typeof(Season));
             EnumsListBox.SelectedIndex = 0;
+            //second page
+            _rectangles = new Rectangle[5];
+            var rand = new Random();
+            double length, width;
+            for (int i = 0; i < 5; i++)
+            {
+                length = Math.Round(rand.NextDouble() * 100, 1);
+                width = Math.Round(rand.NextDouble() * 100, 1);
+                _rectangles[i] = new Rectangle(length, width, _colors[i]);
+                RectangleListBox.Items.Add("Rectangle " + (i + 1));
+            }
+            RectangleListBox.SelectedIndex = 0;
+
+            _movies = new Film[5]
+            {
+                new Film("Tenet", 2, 2020, "Action", 8),
+                new Film("The Gentlemen", 2, 2019, "Criminal", 9),
+                new Film("Interstellar", 3, 2014, "Science fiction", 7),
+                new Film("The Martian", 2, 2015, "Science fiction", 7.7),
+                new Film("Stalk", 2, 2019, "с++", 7)
+            };
+
+            foreach (var movie in _movies)
+            {
+                FilmsListBox.Items.Add(movie.Name);
+            }
+            FilmsListBox.SelectedIndex = 0;
         }
 
         private void EnumsListBox_SelectedIndexChanged(object sender, EventArgs e)
