@@ -13,13 +13,9 @@ namespace Programming.Model
         /// 
         /// </summary>
         private int _releaseYear;
-        /// <summary>
-        /// 
-        /// </summary>
+
         private double _rating;
-        /// <summary>
-        /// 
-        /// </summary>
+
         public Film()
         { }
 
@@ -32,6 +28,7 @@ namespace Programming.Model
             Rating = rating;
         }
         public string Name { get; set; }
+
         public int DurationMinute 
         {
             get
@@ -44,6 +41,7 @@ namespace Programming.Model
                 _durationMinute = value;
             }
         }
+
         public int ReleaseYear 
         {
             get
@@ -52,11 +50,17 @@ namespace Programming.Model
             }
             set
             {
-                if (value < 1900 && value > 2022) throw new ArgumentException();
+                if (value < 1900 && value > 2022)
+                {
+                    throw new ArgumentException();
+                }
+
                 _releaseYear = value;
             }
         }
+
         public string Genre { get; set; }
+
         public double Rating 
         {
             get

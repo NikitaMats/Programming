@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.TabControl = new System.Windows.Forms.TabControl();
             this.EnamsTabPage = new System.Windows.Forms.TabPage();
@@ -71,6 +72,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.RectangleListBox = new System.Windows.Forms.ListBox();
             this.TabPage = new System.Windows.Forms.TabPage();
+            this.ToolTip = new System.Windows.Forms.ToolTip(this.components);
             this.TabControl.SuspendLayout();
             this.EnamsTabPage.SuspendLayout();
             this.SeasonGroupBox.SuspendLayout();
@@ -318,9 +320,9 @@
             this.FilmGroupBox.Controls.Add(this.FilmsListBox);
             this.FilmGroupBox.Dock = System.Windows.Forms.DockStyle.Right;
             this.FilmGroupBox.Location = new System.Drawing.Point(401, 2);
-            this.FilmGroupBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.FilmGroupBox.Margin = new System.Windows.Forms.Padding(4);
             this.FilmGroupBox.Name = "FilmGroupBox";
-            this.FilmGroupBox.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.FilmGroupBox.Padding = new System.Windows.Forms.Padding(4);
             this.FilmGroupBox.Size = new System.Drawing.Size(388, 366);
             this.FilmGroupBox.TabIndex = 1;
             this.FilmGroupBox.TabStop = false;
@@ -329,7 +331,7 @@
             // FilmRatingTextBox
             // 
             this.FilmRatingTextBox.Location = new System.Drawing.Point(185, 263);
-            this.FilmRatingTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.FilmRatingTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.FilmRatingTextBox.Name = "FilmRatingTextBox";
             this.FilmRatingTextBox.Size = new System.Drawing.Size(160, 22);
             this.FilmRatingTextBox.TabIndex = 18;
@@ -348,7 +350,7 @@
             // FilmReleaseTextBox
             // 
             this.FilmReleaseTextBox.Location = new System.Drawing.Point(185, 208);
-            this.FilmReleaseTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.FilmReleaseTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.FilmReleaseTextBox.Name = "FilmReleaseTextBox";
             this.FilmReleaseTextBox.Size = new System.Drawing.Size(160, 22);
             this.FilmReleaseTextBox.TabIndex = 16;
@@ -367,7 +369,7 @@
             // FilmDurationTextBox
             // 
             this.FilmDurationTextBox.Location = new System.Drawing.Point(185, 153);
-            this.FilmDurationTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.FilmDurationTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.FilmDurationTextBox.Name = "FilmDurationTextBox";
             this.FilmDurationTextBox.Size = new System.Drawing.Size(160, 22);
             this.FilmDurationTextBox.TabIndex = 14;
@@ -386,7 +388,7 @@
             // FilmGenreTextBox
             // 
             this.FilmGenreTextBox.Location = new System.Drawing.Point(185, 98);
-            this.FilmGenreTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.FilmGenreTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.FilmGenreTextBox.Name = "FilmGenreTextBox";
             this.FilmGenreTextBox.Size = new System.Drawing.Size(160, 22);
             this.FilmGenreTextBox.TabIndex = 12;
@@ -405,7 +407,7 @@
             // FilmNameTextBox
             // 
             this.FilmNameTextBox.Location = new System.Drawing.Point(185, 44);
-            this.FilmNameTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.FilmNameTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.FilmNameTextBox.Name = "FilmNameTextBox";
             this.FilmNameTextBox.Size = new System.Drawing.Size(160, 22);
             this.FilmNameTextBox.TabIndex = 10;
@@ -424,7 +426,7 @@
             // FindFilmButton
             // 
             this.FindFilmButton.Location = new System.Drawing.Point(185, 310);
-            this.FindFilmButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.FindFilmButton.Margin = new System.Windows.Forms.Padding(4);
             this.FindFilmButton.Name = "FindFilmButton";
             this.FindFilmButton.Size = new System.Drawing.Size(100, 23);
             this.FindFilmButton.TabIndex = 8;
@@ -437,7 +439,7 @@
             this.FilmsListBox.FormattingEnabled = true;
             this.FilmsListBox.ItemHeight = 16;
             this.FilmsListBox.Location = new System.Drawing.Point(8, 25);
-            this.FilmsListBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.FilmsListBox.Margin = new System.Windows.Forms.Padding(4);
             this.FilmsListBox.Name = "FilmsListBox";
             this.FilmsListBox.Size = new System.Drawing.Size(168, 308);
             this.FilmsListBox.TabIndex = 0;
@@ -466,7 +468,7 @@
             // FindRectangleButton
             // 
             this.FindRectangleButton.Location = new System.Drawing.Point(185, 310);
-            this.FindRectangleButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.FindRectangleButton.Margin = new System.Windows.Forms.Padding(4);
             this.FindRectangleButton.Name = "FindRectangleButton";
             this.FindRectangleButton.Size = new System.Drawing.Size(100, 23);
             this.FindRectangleButton.TabIndex = 7;
@@ -477,7 +479,7 @@
             // ColorTextBox
             // 
             this.ColorTextBox.Location = new System.Drawing.Point(185, 153);
-            this.ColorTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ColorTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.ColorTextBox.Name = "ColorTextBox";
             this.ColorTextBox.Size = new System.Drawing.Size(160, 22);
             this.ColorTextBox.TabIndex = 6;
@@ -496,7 +498,7 @@
             // WidthTextBox
             // 
             this.WidthTextBox.Location = new System.Drawing.Point(185, 98);
-            this.WidthTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.WidthTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.WidthTextBox.Name = "WidthTextBox";
             this.WidthTextBox.Size = new System.Drawing.Size(160, 22);
             this.WidthTextBox.TabIndex = 4;
@@ -515,7 +517,7 @@
             // LenghtTextBox
             // 
             this.LenghtTextBox.Location = new System.Drawing.Point(185, 44);
-            this.LenghtTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.LenghtTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.LenghtTextBox.Name = "LenghtTextBox";
             this.LenghtTextBox.Size = new System.Drawing.Size(160, 22);
             this.LenghtTextBox.TabIndex = 2;
@@ -536,7 +538,7 @@
             this.RectangleListBox.FormattingEnabled = true;
             this.RectangleListBox.ItemHeight = 16;
             this.RectangleListBox.Location = new System.Drawing.Point(8, 25);
-            this.RectangleListBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.RectangleListBox.Margin = new System.Windows.Forms.Padding(4);
             this.RectangleListBox.Name = "RectangleListBox";
             this.RectangleListBox.Size = new System.Drawing.Size(168, 308);
             this.RectangleListBox.TabIndex = 0;
@@ -552,6 +554,11 @@
             this.TabPage.TabIndex = 2;
             this.TabPage.Text = "tabPage";
             this.TabPage.UseVisualStyleBackColor = true;
+            // 
+            // ToolTip
+            // 
+            this.ToolTip.AutomaticDelay = 50;
+            this.ToolTip.ShowAlways = true;
             // 
             // MainForm
             // 
@@ -625,6 +632,7 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox FilmReleaseTextBox;
         private System.Windows.Forms.TextBox FilmRatingTextBox;
+        private System.Windows.Forms.ToolTip ToolTip;
     }
 }
 

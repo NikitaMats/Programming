@@ -45,11 +45,13 @@ namespace Programming.View
         public MainForm()
         {
             InitializeComponent();
-            //first page
+
+            // first page
             EnumsListBox.DataSource = Enum.GetValues(typeof(Enums));
             SeasonComboBox.DataSource = Enum.GetValues(typeof(Season));
             EnumsListBox.SelectedIndex = 0;
-            //second page
+
+            // second page
             _rectangles = new Rectangle[5];
             var rand = new Random();
             double length, width;
@@ -60,6 +62,7 @@ namespace Programming.View
                 _rectangles[i] = new Rectangle(length, width, _colors[1]);
                 RectangleListBox.Items.Add("Rectangle " + (i + 1));
             }
+
             RectangleListBox.SelectedIndex = 0;
 
             _movies = new Film[5]
@@ -161,10 +164,12 @@ namespace Programming.View
             try
             {
                 _currentRectangle.Length = Convert.ToDouble(LenghtTextBox.Text);
+                ToolTip.SetToolTip(FilmDurationTextBox, "");
             }
             catch
             {
                 LenghtTextBox.BackColor = ColorTranslator.FromHtml("LightPink");
+                ToolTip.SetToolTip(FilmDurationTextBox, "Error");
             }
         }
 
@@ -174,10 +179,12 @@ namespace Programming.View
             try
             {
                 _currentRectangle.Width = Convert.ToDouble(WidthTextBox.Text);
+                ToolTip.SetToolTip(FilmDurationTextBox, "");
             }
             catch
             {
                 WidthTextBox.BackColor = ColorTranslator.FromHtml("LightPink");
+                ToolTip.SetToolTip(FilmDurationTextBox, "Error");
             }
         }
 
@@ -219,9 +226,11 @@ namespace Programming.View
             try
             {
                 _currentMovie.DurationMinute = Convert.ToInt32(FilmDurationTextBox.Text);
+                ToolTip.SetToolTip(FilmDurationTextBox, "");
             }
             catch
             {
+                ToolTip.SetToolTip(FilmDurationTextBox, "Error");
                 FilmDurationTextBox.BackColor = ColorTranslator.FromHtml("LightPink");
             }
         }
@@ -232,23 +241,27 @@ namespace Programming.View
             try
             {
                 _currentMovie.ReleaseYear = Convert.ToInt32(FilmReleaseTextBox.Text);
+                ToolTip.SetToolTip(FilmDurationTextBox, "");
             }
             catch
             {
                 FilmReleaseTextBox.BackColor = ColorTranslator.FromHtml("LightPink");
+                ToolTip.SetToolTip(FilmDurationTextBox, "Error");
             }
         }
-
+        `
         private void FilmRatingTextBox_TextChanged(object sender, EventArgs e)
         {
             FilmRatingTextBox.BackColor = ColorTranslator.FromHtml("Window");
             try
             {
                 _currentMovie.Rating = Convert.ToDouble(FilmRatingTextBox.Text);
+                ToolTip.SetToolTip(FilmDurationTextBox, "");
             }
             catch
             {
                 FilmRatingTextBox.BackColor = ColorTranslator.FromHtml("LightPink");
+                ToolTip.SetToolTip(FilmDurationTextBox, "Error");
             }
         }
 
