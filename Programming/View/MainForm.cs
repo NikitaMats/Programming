@@ -14,10 +14,10 @@ namespace Programming.View
         private Rectangle _currentRectangle;
         private Movie[] _movies;
         private Movie _currentMovie;
-        private int RectanglesAmount = 5;
-        private int MoviesAmount = 5;
-        private string errorСolor = "LightPink";
-        private string normalColor = "Window";
+        private int _rectanglesAmount = 5;
+        private int _moviesAmount = 5;
+        private string _errorСolor = "LightPink";
+        private string _normalColor = "Window";
 
         private int FindRectangleWithMaxWidth(Rectangle[] rectangles)
         {

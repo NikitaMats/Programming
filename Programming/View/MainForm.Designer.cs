@@ -147,7 +147,7 @@
             // SeasonLabel
             // 
             this.SeasonLabel.AutoSize = true;
-            this.SeasonLabel.Location = new System.Drawing.Point(5, 33);
+            this.SeasonLabel.Location = new System.Drawing.Point(6, 35);
             this.SeasonLabel.Name = "SeasonLabel";
             this.SeasonLabel.Size = new System.Drawing.Size(105, 16);
             this.SeasonLabel.TabIndex = 4;
@@ -199,7 +199,7 @@
             // LabelParsing
             // 
             this.LabelParsing.AutoSize = true;
-            this.LabelParsing.Location = new System.Drawing.Point(11, 33);
+            this.LabelParsing.Location = new System.Drawing.Point(7, 35);
             this.LabelParsing.Name = "LabelParsing";
             this.LabelParsing.Size = new System.Drawing.Size(144, 16);
             this.LabelParsing.TabIndex = 0;
@@ -225,7 +225,7 @@
             // 
             // IntTextBox
             // 
-            this.IntTextBox.Location = new System.Drawing.Point(379, 41);
+            this.IntTextBox.Location = new System.Drawing.Point(384, 40);
             this.IntTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.IntTextBox.Name = "IntTextBox";
             this.IntTextBox.Size = new System.Drawing.Size(131, 22);
@@ -262,7 +262,7 @@
             // 
             this.ValuesListBox.FormattingEnabled = true;
             this.ValuesListBox.ItemHeight = 16;
-            this.ValuesListBox.Location = new System.Drawing.Point(184, 41);
+            this.ValuesListBox.Location = new System.Drawing.Point(198, 41);
             this.ValuesListBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.ValuesListBox.Name = "ValuesListBox";
             this.ValuesListBox.Size = new System.Drawing.Size(131, 148);
