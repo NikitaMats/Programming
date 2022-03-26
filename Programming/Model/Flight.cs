@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Programming.Model
 {
@@ -13,11 +9,11 @@ namespace Programming.Model
         public Flight()
         { }
 
-        public Flight(string departurePoint, string destinationPoint, int flightTimrMinute)
+        public Flight(string departurePoint, string destinationPoint, int flightTimeMinute)
         {
             DeparturePoint = departurePoint;
             DestinationPoint = destinationPoint;
-            FlightTimeMinute = flightTimrMinute;
+            FlightTimeMinute = flightTimeMinute;
         }
         public string DeparturePoint { get; set; }
         public string DestinationPoint { get; set; }
@@ -29,7 +25,10 @@ namespace Programming.Model
             }
             set
             {
-                if (value <= 0) throw new ArgumentException();
+                if (value <= 0)
+                {
+                    throw new ArgumentException();
+                }
                 _flightTimeMinute = value;
             }
         }

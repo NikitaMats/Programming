@@ -207,7 +207,7 @@ namespace Programming.View
             _currentMovie = _movies[selectedMovie];
             MovieNameTextBox.Text = _currentMovie.Name;
             MovieGenreTextBox.Text = _currentMovie.Genre;
-            MovieDurationTextBox.Text = _currentMovie.DurationMinute.ToString();
+            MovieDurationTextBox.Text = _currentMovie.DurationMinutes.ToString();
             MovieReleaseTextBox.Text = _currentMovie.ReleaseYear.ToString();
             MovieRatingTextBox.Text = _currentMovie.Rating.ToString();
         }
@@ -227,7 +227,7 @@ namespace Programming.View
             MovieDurationTextBox.BackColor = ColorTranslator.FromHtml("Window");
             try
             {
-                _currentMovie.DurationMinute = Convert.ToInt32(MovieDurationTextBox.Text);
+                _currentMovie.DurationMinutes = Convert.ToInt32(MovieDurationTextBox.Text);
                 ToolTip.SetToolTip(MovieDurationTextBox, "");
             }
             catch

@@ -1,17 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Programming.Model
 {
     public class Movie
     {
-        private int _durationMinute;
-        /// <summary>
-        /// 
-        /// </summary>
+        private int _durationMinutes;
+
         private int _releaseYear;
 
         private double _rating;
@@ -19,26 +13,30 @@ namespace Programming.Model
         public Movie()
         { }
 
-        public Movie(string name, int durationminute, int releaseyear,string genre,double rating)
+        public Movie(string name, int durationminutes, int releaseyear,string genre,double rating)
         {
             Name = name;
-            DurationMinute = durationminute;
+            DurationMinutes = durationminutes;
             ReleaseYear = releaseyear;
             Genre = genre;
             Rating = rating;
         }
+
         public string Name { get; set; }
 
-        public int DurationMinute 
+        public int DurationMinutes 
         {
             get
             {
-                return _durationMinute;
+                return _durationMinutes;
             }
             set
             {
-                if (value <= 0) throw new ArgumentException();
-                _durationMinute = value;
+                if (value <= 0)
+                {
+                    throw new ArgumentException();
+                }
+                _durationMinutes = value;
             }
         }
 
@@ -69,7 +67,10 @@ namespace Programming.Model
             }
             set
             {
-                if (value < 0 && value > 10) throw new ArgumentException();
+                if (value <= 0)
+                {
+                    throw new ArgumentException();
+                }
                 _rating = value;
             }
         }

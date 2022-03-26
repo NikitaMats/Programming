@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Programming.Model
 {
@@ -13,14 +9,14 @@ namespace Programming.Model
         public Subject()
         { }
 
-        public Subject(string lesson, string instructor, int position)
+        public Subject(string name, string lecturer, int position)
         {
-            Lesson = lesson;
-            Instructor = instructor;
+            Name = name;
+            Lecturer = lecturer;
             Position = position;
         }
-        public string Lesson { get; set; }
-        public string Instructor { get; set; }
+        public string Name { get; set; }
+        public string Lecturer { get; set; }
         public int Position 
         {
             get

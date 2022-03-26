@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Programming.Model
 {
@@ -28,7 +24,10 @@ namespace Programming.Model
             }
             set
             {
-                if (value <= 0) throw new ArgumentException();
+                if (value <= 0)
+                {
+                    throw new ArgumentException();
+                }
                 _length = value;
             }
         }
@@ -40,7 +39,10 @@ namespace Programming.Model
             }
             set
             {
-                if (value <= 0) throw new ArgumentException();
+                if (value <= 0)
+                {
+                    throw new ArgumentException();
+                }
                 _width = value;
             }
         }

@@ -1,24 +1,20 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Programming.Model
 {
     public class Song
     {
         private int _id;
-        private int _durationMinute;
+        private int _durationMinutes;
         public Song()
         { }
 
-        public Song(int id, string name, string autor, int duretionminute)
+        public Song(int id, string name, string author, int duretionminutes)
         {
             Id = id;
             Name = name;
-            Autor = autor;
-            DuretionMinute = duretionminute;
+            Author = author;
+            DurationMinutes = duretionminutes;
         }
         public int Id 
         {
@@ -28,22 +24,28 @@ namespace Programming.Model
             }
             set
             {
-                if (value < 0) throw new ArgumentException();
+                if (value <= 0)
+                {
+                    throw new ArgumentException();
+                }
                 _id = value;
             }
         }
         public string Name { get; set; }
-        public string Autor { get; set; }
-        public int DuretionMinute 
+        public string Author { get; set; }
+        public int DurationMinutes 
         {
             get
             {
-                return _durationMinute;
+                return _durationMinutes;
             }
             set
             {
-                if (value <= 0) throw new ArgumentException();
-                _durationMinute = value;
+                if (value <= 0)
+                {
+                    throw new ArgumentException();
+                }
+                _durationMinutes = value;
             }
         }
     }
