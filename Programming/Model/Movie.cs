@@ -10,7 +10,8 @@ namespace Programming.Model
 
         private double _rating;
 
-        int year = DateTime.Now.Year;
+        private int year = DateTime.Now.Year;
+
         public Movie()
         { }
 

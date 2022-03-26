@@ -5,6 +5,7 @@ namespace Programming.Model
     public class Rectangle
     {
         private double _length;
+
         private double _width;
 
         public Rectangle()
@@ -16,6 +17,7 @@ namespace Programming.Model
             Width = width;
             Color = color;
         }
+
         public double Length 
         {
             get
@@ -31,6 +33,7 @@ namespace Programming.Model
                 _length = value;
             }
         }
+
         public double Width 
         {
             get
@@ -46,6 +49,7 @@ namespace Programming.Model
                 _width = value;
             }
         }
+
         public string Color { get; set; }
     }
 }

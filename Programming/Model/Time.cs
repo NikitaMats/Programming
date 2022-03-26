@@ -5,7 +5,9 @@ namespace Programming.Model
     public class Time
     {
         private int _hours;
+
         private int _minutes;
+
         private int _seconds;
 
         public Time()
@@ -17,6 +19,7 @@ namespace Programming.Model
             Minutes = minutes;
             Seconds = seconds;
         }
+
         public int Hours 
         {
             get
@@ -32,6 +35,7 @@ namespace Programming.Model
                 _hours = value;
             }
         }
+
         public int Minutes 
         {
             get
@@ -47,6 +51,7 @@ namespace Programming.Model
                 _minutes = value;
             }
         }
+
         public int Seconds 
         {
             get

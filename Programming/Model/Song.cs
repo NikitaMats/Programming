@@ -5,7 +5,9 @@ namespace Programming.Model
     public class Song
     {
         private int _id;
+
         private int _durationMinutes;
+
         public Song()
         { }
 
@@ -16,6 +18,7 @@ namespace Programming.Model
             Author = author;
             DurationMinutes = duretionminutes;
         }
+
         public int Id 
         {
             get
@@ -31,8 +34,11 @@ namespace Programming.Model
                 _id = value;
             }
         }
+
         public string Name { get; set; }
+
         public string Author { get; set; }
+
         public int DurationMinutes 
         {
             get

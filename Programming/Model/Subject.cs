@@ -15,8 +15,11 @@ namespace Programming.Model
             Lecturer = lecturer;
             Position = position;
         }
+
         public string Name { get; set; }
+
         public string Lecturer { get; set; }
+
         public int Position 
         {
             get
