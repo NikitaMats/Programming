@@ -50,7 +50,7 @@
     <Compile Include="Model\Subject.cs" />
     <Compile Include="Model\Сontact.cs" />
     <Compile Include="Model\Time.cs" />
-    <Compile Include="Model\Film.cs" />
+    <Compile Include="Model\Movie.cs" />
     <Compile Include="Model\Flight.cs" />
     <Compile Include="Model\Rectangle.cs" />
     <Compile Include="View\Enums.cs" />

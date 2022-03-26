@@ -11,36 +11,38 @@ namespace Programming.View
         private string[] _colors = { "Red", "Black", "Green", "Yellow", "Orange" };
         private Rectangle[] _rectangles;
         private Rectangle _currentRectangle;
-        private Film[] _movies;
-        private Film _currentMovie;
+        private Movie[] _movies;
+        private Movie _currentMovie;
+        private int RectanglesAmount = 5;
+        private int MoviesAmount = 5;
 
         private int FindRectangleWithMaxWidth(Rectangle[] rectangles)
         {
-            int indexMaxWide = 0;
+            int indexOfMaxWidth = 0;
             double max = 0;
-            for (int i = 0; i < 5; i++)
+            for (int i = 0; i < RectanglesAmount; i++)
             {
                 if (rectangles[i].Width > max)
                 {
                     max = rectangles[i].Width;
-                    indexMaxWide = i;
+                    indexOfMaxWidth = i;
                 }
             }
-            return indexMaxWide;
+            return indexOfMaxWidth;
         }
-        private int FindMaxRatingFilm(Film[] movies)
+        private int FindMovieWithMaxRating(Movie[] movies)
         {
-            int indexMaxRating = 0;
+            int indexOfMaxRating = 0;
             double max = 0;
-            for (int i = 0; i < 5; i++)
+            for (int i = 0; i < MoviesAmount; i++)
             {
                 if (movies[i].Rating > max)
                 {
                     max = movies[i].Rating;
-                    indexMaxRating = i;
+                    indexOfMaxRating = i;
                 }
             }
-            return indexMaxRating;
+            return indexOfMaxRating;
         }
         public MainForm()
         {
@@ -60,25 +62,25 @@ namespace Programming.View
                 length = Math.Round(rand.NextDouble() * 100, 1);
                 width = Math.Round(rand.NextDouble() * 100, 1);
                 _rectangles[i] = new Rectangle(length, width, _colors[1]);
-                RectangleListBox.Items.Add("Rectangle " + (i + 1));
+                RectanglesListBox.Items.Add("Rectangle " + (i + 1));
             }
 
-            RectangleListBox.SelectedIndex = 0;
+            RectanglesListBox.SelectedIndex = 0;
 
-            _movies = new Film[5]
+            _movies = new Movie[5]
             {
-                new Film("The Green Mile", 189, 1999, "Drama", 9.1),
-                new Film("Intouchables", 112, 2011, "Drama", 8.8),
-                new Film("Interstellar", 169, 2014, "Science fiction", 7),
-                new Film("Back to the Future", 116, 1985, "Science fiction", 8.7),
-                new Film("WALL·E", 98, 2008, "Сartoon", 8.6),
+                new Movie("The Green Mile", 189, 1999, "Drama", 9.1),
+                new Movie("Intouchables", 112, 2011, "Drama", 8.8),
+                new Movie("Interstellar", 169, 2014, "Science fiction", 7),
+                new Movie("Back to the Future", 116, 1985, "Science fiction", 8.7),
+                new Movie("WALL·E", 98, 2008, "Сartoon", 8.6),
             };
 
             foreach (var movie in _movies)
             {
-                FilmsListBox.Items.Add(movie.Name);
+                MoviesListBox.Items.Add(movie.Name);
             }
-            FilmsListBox.SelectedIndex = 0;
+            MoviesListBox.SelectedIndex = 0;
         }
 
         private void EnumsListBox_SelectedIndexChanged(object sender, EventArgs e)
@@ -149,9 +151,9 @@ namespace Programming.View
             }
         }
 
-        private void RectangleListBox_SelectedIndexChanged(object sender, EventArgs e)
+        private void RectanglesListBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            var selectedRectangle = RectangleListBox.SelectedIndex;
+            var selectedRectangle = RectanglesListBox.SelectedIndex;
             _currentRectangle = _rectangles[selectedRectangle];
             LenghtTextBox.Text = _currentRectangle.Length.ToString();
             WidthTextBox.Text = _currentRectangle.Width.ToString();
@@ -164,12 +166,12 @@ namespace Programming.View
             try
             {
                 _currentRectangle.Length = Convert.ToDouble(LenghtTextBox.Text);
-                ToolTip.SetToolTip(FilmDurationTextBox, "");
+                ToolTip.SetToolTip(MovieDurationTextBox, "");
             }
             catch
             {
                 LenghtTextBox.BackColor = ColorTranslator.FromHtml("LightPink");
-                ToolTip.SetToolTip(FilmDurationTextBox, "Error");
+                ToolTip.SetToolTip(MovieDurationTextBox, "Error");
             }
         }
 
@@ -179,12 +181,12 @@ namespace Programming.View
             try
             {
                 _currentRectangle.Width = Convert.ToDouble(WidthTextBox.Text);
-                ToolTip.SetToolTip(FilmDurationTextBox, "");
+                ToolTip.SetToolTip(MovieDurationTextBox, "");
             }
             catch
             {
                 WidthTextBox.BackColor = ColorTranslator.FromHtml("LightPink");
-                ToolTip.SetToolTip(FilmDurationTextBox, "Error");
+                ToolTip.SetToolTip(MovieDurationTextBox, "Error");
             }
         }
 
@@ -196,79 +198,79 @@ namespace Programming.View
         private void FindRectangleButton_Click(object sender, EventArgs e)
         {
             int indexFindRectangle = FindRectangleWithMaxWidth(_rectangles);
-            RectangleListBox.SelectedIndex = indexFindRectangle;
+            RectanglesListBox.SelectedIndex = indexFindRectangle;
         }
 
-        private void FilmsListBox_SelectedIndexChanged(object sender, EventArgs e)
+        private void MoviesListBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            var selectedMovie = FilmsListBox.SelectedIndex;
+            var selectedMovie = MoviesListBox.SelectedIndex;
             _currentMovie = _movies[selectedMovie];
-            FilmNameTextBox.Text = _currentMovie.Name;
-            FilmGenreTextBox.Text = _currentMovie.Genre;
-            FilmDurationTextBox.Text = _currentMovie.DurationMinute.ToString();
-            FilmReleaseTextBox.Text = _currentMovie.ReleaseYear.ToString();
-            FilmRatingTextBox.Text = _currentMovie.Rating.ToString();
+            MovieNameTextBox.Text = _currentMovie.Name;
+            MovieGenreTextBox.Text = _currentMovie.Genre;
+            MovieDurationTextBox.Text = _currentMovie.DurationMinute.ToString();
+            MovieReleaseTextBox.Text = _currentMovie.ReleaseYear.ToString();
+            MovieRatingTextBox.Text = _currentMovie.Rating.ToString();
         }
 
-        private void FilmNameTextBox_TextChanged(object sender, EventArgs e)
+        private void MovieNameTextBox_TextChanged(object sender, EventArgs e)
         {
-            _currentMovie.Name = FilmNameTextBox.Text;
+            _currentMovie.Name = MovieNameTextBox.Text;
         }
 
-        private void FilmGenreTextBox_TextChanged(object sender, EventArgs e)
+        private void MovieGenreTextBox_TextChanged(object sender, EventArgs e)
         {
-            _currentMovie.Genre = FilmGenreTextBox.Text;
+            _currentMovie.Genre = MovieGenreTextBox.Text;
         }
 
-        private void FimDuretionTextBox_TextChanged(object sender, EventArgs e)
+        private void MovieDuretionTextBox_TextChanged(object sender, EventArgs e)
         {
-            FilmDurationTextBox.BackColor = ColorTranslator.FromHtml("Window");
+            MovieDurationTextBox.BackColor = ColorTranslator.FromHtml("Window");
             try
             {
-                _currentMovie.DurationMinute = Convert.ToInt32(FilmDurationTextBox.Text);
-                ToolTip.SetToolTip(FilmDurationTextBox, "");
+                _currentMovie.DurationMinute = Convert.ToInt32(MovieDurationTextBox.Text);
+                ToolTip.SetToolTip(MovieDurationTextBox, "");
             }
             catch
             {
-                ToolTip.SetToolTip(FilmDurationTextBox, "Error");
-                FilmDurationTextBox.BackColor = ColorTranslator.FromHtml("LightPink");
+                ToolTip.SetToolTip(MovieDurationTextBox, "Error");
+                MovieDurationTextBox.BackColor = ColorTranslator.FromHtml("LightPink");
             }
         }
 
-        private void FilmReleaseTextBox_TextChanged(object sender, EventArgs e)
+        private void MovieReleaseTextBox_TextChanged(object sender, EventArgs e)
         {
-            FilmReleaseTextBox.BackColor = ColorTranslator.FromHtml("Window");
+            MovieReleaseTextBox.BackColor = ColorTranslator.FromHtml("Window");
             try
             {
-                _currentMovie.ReleaseYear = Convert.ToInt32(FilmReleaseTextBox.Text);
-                ToolTip.SetToolTip(FilmDurationTextBox, "");
+                _currentMovie.ReleaseYear = Convert.ToInt32(MovieReleaseTextBox.Text);
+                ToolTip.SetToolTip(MovieDurationTextBox, "");
             }
             catch
             {
-                FilmReleaseTextBox.BackColor = ColorTranslator.FromHtml("LightPink");
-                ToolTip.SetToolTip(FilmDurationTextBox, "Error");
+                MovieReleaseTextBox.BackColor = ColorTranslator.FromHtml("LightPink");
+                ToolTip.SetToolTip(MovieDurationTextBox, "Error");
             }
         }
-        `
-        private void FilmRatingTextBox_TextChanged(object sender, EventArgs e)
+        
+        private void MovieRatingTextBox_TextChanged(object sender, EventArgs e)
         {
-            FilmRatingTextBox.BackColor = ColorTranslator.FromHtml("Window");
+            MovieRatingTextBox.BackColor = ColorTranslator.FromHtml("Window");
             try
             {
-                _currentMovie.Rating = Convert.ToDouble(FilmRatingTextBox.Text);
-                ToolTip.SetToolTip(FilmDurationTextBox, "");
+                _currentMovie.Rating = Convert.ToDouble(MovieRatingTextBox.Text);
+                ToolTip.SetToolTip(MovieDurationTextBox, "");
             }
             catch
             {
-                FilmRatingTextBox.BackColor = ColorTranslator.FromHtml("LightPink");
-                ToolTip.SetToolTip(FilmDurationTextBox, "Error");
+                MovieRatingTextBox.BackColor = ColorTranslator.FromHtml("LightPink");
+                ToolTip.SetToolTip(MovieDurationTextBox, "Error");
             }
         }
 
-        private void FindFilmButton_Click(object sender, EventArgs e)
+        private void FindMovieButton_Click(object sender, EventArgs e)
         {
-            int indexFindMovie = FindMaxRatingFilm(_movies);
-            FilmsListBox.SelectedIndex = indexFindMovie;
+            int indexFindMovie = FindMovieWithMaxRating(_movies);
+            MoviesListBox.SelectedIndex = indexFindMovie;
         }
     }
 }

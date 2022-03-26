@@ -13,10 +13,10 @@ namespace Programming.Model
         public Сontact()
         { }
 
-        public Сontact(string name, string sername, string number)
+        public Сontact(string name, string surname, string number)
         {
             Name = name;
-            Sername = sername;
+            Surname = surname;
             Number = number;
         }
 
@@ -34,7 +34,7 @@ namespace Programming.Model
             }
         }
         public string Name { get; set; }
-        public string Sername { get; set; }
+        public string Surname { get; set; }
         
     }
 }

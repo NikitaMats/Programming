@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Programming.Model
 {
-    public class Film
+    public class Movie
     {
         private int _durationMinute;
         /// <summary>
@@ -16,10 +16,10 @@ namespace Programming.Model
 
         private double _rating;
 
-        public Film()
+        public Movie()
         { }
 
-        public Film(string name, int durationminute, int releaseyear,string genre,double rating)
+        public Movie(string name, int durationminute, int releaseyear,string genre,double rating)
         {
             Name = name;
             DurationMinute = durationminute;

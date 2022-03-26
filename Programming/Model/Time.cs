@@ -1,60 +1,56 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Programming.Model
 {
     public class Time
     {
-        private int _hour;
-        private int _minute;
-        private int _second;
+        private int _hours;
+        private int _minutes;
+        private int _seconds;
 
         public Time()
         { }
 
-        public Time(int hour, int minute, int second)
+        public Time(int hours, int minutes, int seconds)
         {
-            Hour = hour;
-            Minute = minute;
-            Second = second;
+            Hours = hours;
+            Minutes = minutes;
+            Seconds = seconds;
         }
-        public int Hour 
+        public int Hours 
         {
             get
             {
-                return _hour;
+                return _hours;
             }
             set
             {
                 if (value < 0 && value > 23) throw new ArgumentException();
-                _hour = value;
+                _hours = value;
             }
         }
-        public int Minute 
+        public int Minutes 
         {
             get
             {
-                return _minute;
+                return _minutes;
             }
             set
             {
                 if (value < 0 && value > 60) throw new ArgumentException();
-                _minute = value;
+                _minutes = value;
             }
         }
-        public int Second 
+        public int Seconds 
         {
             get
             {
-                return _second;
+                return _seconds;
             }
             set
             {
                 if (value < 0 && value > 60) throw new ArgumentException();
-                _second = value;
+                _seconds = value;
             }
         }
     }
