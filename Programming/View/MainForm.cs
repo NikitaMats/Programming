@@ -15,6 +15,8 @@ namespace Programming.View
         private Movie _currentMovie;
         private int RectanglesAmount = 5;
         private int MoviesAmount = 5;
+        private string errorСolor = "LightPink";
+        private string normalColor = "Window";
 
         private int FindRectangleWithMaxWidth(Rectangle[] rectangles)
         {
@@ -162,7 +164,7 @@ namespace Programming.View
 
         private void LenghtTextBox_TextChanged(object sender, EventArgs e)
         {
-            LenghtTextBox.BackColor = ColorTranslator.FromHtml("Window");
+            LenghtTextBox.BackColor = ColorTranslator.FromHtml(normalColor);
             try
             {
                 _currentRectangle.Length = Convert.ToDouble(LenghtTextBox.Text);
@@ -170,14 +172,14 @@ namespace Programming.View
             }
             catch
             {
-                LenghtTextBox.BackColor = ColorTranslator.FromHtml("LightPink");
+                LenghtTextBox.BackColor = ColorTranslator.FromHtml(errorСolor);
                 ToolTip.SetToolTip(MovieDurationTextBox, "Error");
             }
         }
 
         private void WidthTextBox_TextChanged(object sender, EventArgs e)
         {
-            WidthTextBox.BackColor = ColorTranslator.FromHtml("Window");
+            WidthTextBox.BackColor = ColorTranslator.FromHtml(normalColor);
             try
             {
                 _currentRectangle.Width = Convert.ToDouble(WidthTextBox.Text);
@@ -185,7 +187,7 @@ namespace Programming.View
             }
             catch
             {
-                WidthTextBox.BackColor = ColorTranslator.FromHtml("LightPink");
+                WidthTextBox.BackColor = ColorTranslator.FromHtml(errorСolor);
                 ToolTip.SetToolTip(MovieDurationTextBox, "Error");
             }
         }
@@ -224,7 +226,7 @@ namespace Programming.View
 
         private void MovieDuretionTextBox_TextChanged(object sender, EventArgs e)
         {
-            MovieDurationTextBox.BackColor = ColorTranslator.FromHtml("Window");
+            MovieDurationTextBox.BackColor = ColorTranslator.FromHtml(normalColor);
             try
             {
                 _currentMovie.DurationMinutes = Convert.ToInt32(MovieDurationTextBox.Text);
@@ -233,13 +235,13 @@ namespace Programming.View
             catch
             {
                 ToolTip.SetToolTip(MovieDurationTextBox, "Error");
-                MovieDurationTextBox.BackColor = ColorTranslator.FromHtml("LightPink");
+                MovieDurationTextBox.BackColor = ColorTranslator.FromHtml(errorСolor);
             }
         }
 
         private void MovieReleaseTextBox_TextChanged(object sender, EventArgs e)
         {
-            MovieReleaseTextBox.BackColor = ColorTranslator.FromHtml("Window");
+            MovieReleaseTextBox.BackColor = ColorTranslator.FromHtml(normalColor);
             try
             {
                 _currentMovie.ReleaseYear = Convert.ToInt32(MovieReleaseTextBox.Text);
@@ -247,14 +249,14 @@ namespace Programming.View
             }
             catch
             {
-                MovieReleaseTextBox.BackColor = ColorTranslator.FromHtml("LightPink");
+                MovieReleaseTextBox.BackColor = ColorTranslator.FromHtml(errorСolor);
                 ToolTip.SetToolTip(MovieDurationTextBox, "Error");
             }
         }
         
         private void MovieRatingTextBox_TextChanged(object sender, EventArgs e)
         {
-            MovieRatingTextBox.BackColor = ColorTranslator.FromHtml("Window");
+            MovieRatingTextBox.BackColor = ColorTranslator.FromHtml(normalColor);
             try
             {
                 _currentMovie.Rating = Convert.ToDouble(MovieRatingTextBox.Text);
@@ -262,7 +264,7 @@ namespace Programming.View
             }
             catch
             {
-                MovieRatingTextBox.BackColor = ColorTranslator.FromHtml("LightPink");
+                MovieRatingTextBox.BackColor = ColorTranslator.FromHtml(errorСolor);
                 ToolTip.SetToolTip(MovieDurationTextBox, "Error");
             }
         }

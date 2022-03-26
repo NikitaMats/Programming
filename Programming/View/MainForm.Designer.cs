@@ -366,6 +366,8 @@
             // 
             // MovieDurationTextBox
             // 
+            this.MovieDurationTextBox.BackColor = System.Drawing.SystemColors.Window;
+            this.MovieDurationTextBox.ForeColor = System.Drawing.SystemColors.WindowText;
             this.MovieDurationTextBox.Location = new System.Drawing.Point(185, 153);
             this.MovieDurationTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.MovieDurationTextBox.Name = "MovieDurationTextBox";
