@@ -56,7 +56,7 @@ namespace Programming.View
             EnumsListBox.SelectedIndex = 0;
 
             // second page
-            _rectangles = new Rectangle[5];
+            _rectangles = new Rectangle[RectanglesAmount];
             var rand = new Random();
             double length, width;
             for (int i = 0; i < 5; i++)

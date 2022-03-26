@@ -10,6 +10,7 @@ namespace Programming.Model
 
         private double _rating;
 
+        int year = DateTime.Now.Year;
         public Movie()
         { }
 
@@ -48,7 +49,7 @@ namespace Programming.Model
             }
             set
             {
-                if (value < 1900 && value > 2022)
+                if (value < 1900 || value > year)
                 {
                     throw new ArgumentException();
                 }
@@ -67,7 +68,7 @@ namespace Programming.Model
             }
             set
             {
-                if (value <= 0)
+                if (value <= 0 || value > 10)
                 {
                     throw new ArgumentException();
                 }
