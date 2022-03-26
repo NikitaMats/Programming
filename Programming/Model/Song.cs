@@ -11,12 +11,12 @@ namespace Programming.Model
         public Song()
         { }
 
-        public Song(int id, string name, string author, int duretionminutes)
+        public Song(int id, string name, string author, int durationminutes)
         {
             Id = id;
             Name = name;
             Author = author;
-            DurationMinutes = duretionminutes;
+            DurationMinutes = durationminutes;
         }
 
         public int Id 

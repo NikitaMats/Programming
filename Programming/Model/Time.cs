@@ -28,7 +28,7 @@ namespace Programming.Model
             }
             set
             {
-                if (value < 0 && value > 23)
+                if (value < 0 || value > 23)
                 {
                     throw new ArgumentException();
                 }
@@ -44,7 +44,7 @@ namespace Programming.Model
             }
             set
             {
-                if (value < 0 && value > 60)
+                if (value < 0 || value > 60)
                 {
                     throw new ArgumentException();
                 }
@@ -60,7 +60,7 @@ namespace Programming.Model
             }
             set
             {
-                if (value < 0 && value > 60)
+                if (value < 0 || value > 60)
                 {
                     throw new ArgumentException();
                 }
