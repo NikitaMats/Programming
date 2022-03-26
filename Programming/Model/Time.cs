@@ -25,7 +25,10 @@ namespace Programming.Model
             }
             set
             {
-                if (value < 0 && value > 23) throw new ArgumentException();
+                if (value < 0 && value > 23)
+                {
+                    throw new ArgumentException();
+                }
                 _hours = value;
             }
         }
@@ -37,7 +40,10 @@ namespace Programming.Model
             }
             set
             {
-                if (value < 0 && value > 60) throw new ArgumentException();
+                if (value < 0 && value > 60)
+                {
+                    throw new ArgumentException();
+                }
                 _minutes = value;
             }
         }
@@ -49,7 +55,10 @@ namespace Programming.Model
             }
             set
             {
-                if (value < 0 && value > 60) throw new ArgumentException();
+                if (value < 0 && value > 60)
+                {
+                    throw new ArgumentException();
+                }
                 _seconds = value;
             }
         }

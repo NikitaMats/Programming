@@ -24,8 +24,14 @@ namespace Programming.Model
             }
             set 
             {
-                if (value.Length != 11) throw new ArgumentException();
-                if (!int .TryParse(value, out _)) throw new ArgumentException();
+                if (value.Length != 11)
+                {
+                    throw new ArgumentException();
+                }
+                if (!int .TryParse(value, out _))
+                {
+                    throw new ArgumentException();
+                }
                 _number = value;
             }
         }
