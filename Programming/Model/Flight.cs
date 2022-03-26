@@ -4,26 +4,26 @@ namespace Programming.Model
 {
     public class Flight
     {
-        private int _flightTimeMinute;
+        private int _flightTimeMinutes;
 
         public Flight()
         { }
 
-        public Flight(string departurePoint, string destinationPoint, int flightTimeMinute)
+        public Flight(string departure, string destination, int flightTimeMinutes)
         {
-            DeparturePoint = departurePoint;
-            DestinationPoint = destinationPoint;
-            FlightTimeMinute = flightTimeMinute;
+            Departure = departure;
+            Destination = destination;
+            FlightTimeMinutes = flightTimeMinutes;
         }
-        public string DeparturePoint { get; set; }
+        public string Departure { get; set; }
 
-        public string DestinationPoint { get; set; }
+        public string Destination { get; set; }
 
-        public int FlightTimeMinute 
+        public int FlightTimeMinutes
         {
             get
             {
-                return _flightTimeMinute;
+                return _flightTimeMinutes;
             }
             set
             {
@@ -31,7 +31,7 @@ namespace Programming.Model
                 {
                     throw new ArgumentException();
                 }
-                _flightTimeMinute = value;
+                _flightTimeMinutes = value;
             }
         }
     }
