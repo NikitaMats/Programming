@@ -63,6 +63,10 @@
             this.FindMovieButton = new System.Windows.Forms.Button();
             this.MoviesListBox = new System.Windows.Forms.ListBox();
             this.RectangleGroupBox = new System.Windows.Forms.GroupBox();
+            this.Ycoordinate = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.Xcoordinate = new System.Windows.Forms.TextBox();
             this.FindRectangleButton = new System.Windows.Forms.Button();
             this.ColorTextBox = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -72,6 +76,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.RectanglesListBox = new System.Windows.Forms.ListBox();
             this.ToolTip = new System.Windows.Forms.ToolTip(this.components);
+            this.IdRectangle = new System.Windows.Forms.Label();
+            this.CollisionLable = new System.Windows.Forms.Label();
             this.TabControl.SuspendLayout();
             this.EnamsTabPage.SuspendLayout();
             this.SeasonGroupBox.SuspendLayout();
@@ -425,7 +431,7 @@
             // 
             // FindMovieButton
             // 
-            this.FindMovieButton.Location = new System.Drawing.Point(185, 310);
+            this.FindMovieButton.Location = new System.Drawing.Point(8, 336);
             this.FindMovieButton.Margin = new System.Windows.Forms.Padding(4);
             this.FindMovieButton.Name = "FindMovieButton";
             this.FindMovieButton.Size = new System.Drawing.Size(100, 23);
@@ -447,6 +453,12 @@
             // 
             // RectangleGroupBox
             // 
+            this.RectangleGroupBox.Controls.Add(this.CollisionLable);
+            this.RectangleGroupBox.Controls.Add(this.IdRectangle);
+            this.RectangleGroupBox.Controls.Add(this.Ycoordinate);
+            this.RectangleGroupBox.Controls.Add(this.label10);
+            this.RectangleGroupBox.Controls.Add(this.label9);
+            this.RectangleGroupBox.Controls.Add(this.Xcoordinate);
             this.RectangleGroupBox.Controls.Add(this.FindRectangleButton);
             this.RectangleGroupBox.Controls.Add(this.ColorTextBox);
             this.RectangleGroupBox.Controls.Add(this.label3);
@@ -465,9 +477,41 @@
             this.RectangleGroupBox.TabStop = false;
             this.RectangleGroupBox.Text = "Rectangles";
             // 
+            // Ycoordinate
+            // 
+            this.Ycoordinate.Location = new System.Drawing.Point(185, 263);
+            this.Ycoordinate.Name = "Ycoordinate";
+            this.Ycoordinate.Size = new System.Drawing.Size(160, 22);
+            this.Ycoordinate.TabIndex = 11;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(188, 241);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(19, 16);
+            this.label10.TabIndex = 10;
+            this.label10.Text = "Y:";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(187, 187);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(18, 16);
+            this.label9.TabIndex = 9;
+            this.label9.Text = "X:";
+            // 
+            // Xcoordinate
+            // 
+            this.Xcoordinate.Location = new System.Drawing.Point(185, 208);
+            this.Xcoordinate.Name = "Xcoordinate";
+            this.Xcoordinate.Size = new System.Drawing.Size(160, 22);
+            this.Xcoordinate.TabIndex = 8;
+            // 
             // FindRectangleButton
             // 
-            this.FindRectangleButton.Location = new System.Drawing.Point(185, 310);
+            this.FindRectangleButton.Location = new System.Drawing.Point(8, 336);
             this.FindRectangleButton.Margin = new System.Windows.Forms.Padding(4);
             this.FindRectangleButton.Name = "FindRectangleButton";
             this.FindRectangleButton.Size = new System.Drawing.Size(100, 23);
@@ -549,6 +593,24 @@
             this.ToolTip.ShowAlways = true;
             this.ToolTip.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Error;
             // 
+            // IdRectangle
+            // 
+            this.IdRectangle.AutoSize = true;
+            this.IdRectangle.Location = new System.Drawing.Point(185, 296);
+            this.IdRectangle.Name = "IdRectangle";
+            this.IdRectangle.Size = new System.Drawing.Size(21, 16);
+            this.IdRectangle.TabIndex = 12;
+            this.IdRectangle.Text = "id:";
+            // 
+            // CollisionLable
+            // 
+            this.CollisionLable.AutoSize = true;
+            this.CollisionLable.Location = new System.Drawing.Point(246, 296);
+            this.CollisionLable.Name = "CollisionLable";
+            this.CollisionLable.Size = new System.Drawing.Size(61, 16);
+            this.CollisionLable.TabIndex = 13;
+            this.CollisionLable.Text = "Collision:";
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -621,6 +683,12 @@
         private System.Windows.Forms.TextBox MovieReleaseTextBox;
         private System.Windows.Forms.TextBox MovieRatingTextBox;
         private System.Windows.Forms.ToolTip ToolTip;
+        private System.Windows.Forms.TextBox Ycoordinate;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TextBox Xcoordinate;
+        private System.Windows.Forms.Label IdRectangle;
+        private System.Windows.Forms.Label CollisionLable;
     }
 }
 

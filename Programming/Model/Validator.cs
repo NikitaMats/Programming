@@ -28,7 +28,7 @@ namespace Programming.Model
             }
         }
 
-        public static void AssertValueInRange(double value, int min, int max, string fieldName)
+        public static void AssertValueInRange(double value, double min, double max, string fieldName)
         {
             if (!(value <= max || value >= min))
             {

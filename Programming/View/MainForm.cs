@@ -60,11 +60,14 @@ namespace Programming.View
             _rectangles = new Rectangle[_rectanglesAmount];
             var rand = new Random();
             double length, width;
+            int centerX, centerY;
             for (int i = 0; i < 5; i++)
             {
                 length = Math.Round(rand.NextDouble() * 100, 1);
                 width = Math.Round(rand.NextDouble() * 100, 1);
-                _rectangles[i] = new Rectangle(length, width, _colors[1]);
+                centerX = rand.Next(10);
+                centerY = rand.Next(10);
+                _rectangles[i] = new Rectangle(length, width, _colors[1], new Point2D(centerX, centerY));
                 RectanglesListBox.Items.Add("Rectangle " + (i + 1));
             }
 
@@ -161,6 +164,17 @@ namespace Programming.View
             LenghtTextBox.Text = _currentRectangle.Length.ToString();
             WidthTextBox.Text = _currentRectangle.Width.ToString();
             ColorTextBox.Text = _currentRectangle.Color;
+            Xcoordinate.Text = _currentRectangle.Center.X.ToString();
+            Ycoordinate.Text = _currentRectangle.Center.Y.ToString();
+            IdRectangle.Text = "Id:" + _currentRectangle.Id.ToString();
+            if (CollisionManager.IsCollision(_rectangles[0], _rectangles[1]))
+            {
+                CollisionLable.Text = "Collision: True";
+            }
+            else
+            {
+                CollisionLable.Text = "Collision: False";
+            }
         }
 
         private void LenghtTextBox_TextChanged(object sender, EventArgs e)

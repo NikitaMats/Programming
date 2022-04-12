@@ -47,7 +47,7 @@ namespace Programming.Model
             }
             set
             {
-                Validator.AssertStringContainsOnlyLetters(value, nameof(Surname));
+                Validator.AssertStringContainsOnlyLetters(value, nameof(Name));
                 _name = value;
             }
         }
@@ -61,6 +61,7 @@ namespace Programming.Model
             set
             {
                 Validator.AssertStringContainsOnlyLetters(value, nameof(Surname));
+                _surname = value;
             }
         }
 
