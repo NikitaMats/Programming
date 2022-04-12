@@ -4,7 +4,10 @@ namespace Programming.Model
 {
     public class Сontact
     {
+        private const int _phoneLenght = 11;
         private string _number;
+        private string _name;
+        private string _surname;
 
         public Сontact()
         { }
@@ -24,7 +27,7 @@ namespace Programming.Model
             }
             set 
             {
-                if (value.Length != 11)
+                if (value.Length != _phoneLenght)
                 {
                     throw new ArgumentException();
                 }
@@ -36,9 +39,30 @@ namespace Programming.Model
             }
         }
 
-        public string Name { get; set; }
+        public string Name 
+        {
+            get
+            {
+                return _name;
+            }
+            set
+            {
+                Validator.AssertStringContainsOnlyLetters(value, nameof(Surname));
+                _name = value;
+            }
+        }
 
-        public string Surname { get; set; }
-        
+        public string Surname
+        {
+            get
+            {
+                return _surname;
+            }
+            set
+            {
+                Validator.AssertStringContainsOnlyLetters(value, nameof(Surname));
+            }
+        }
+
     }
 }

@@ -546,8 +546,8 @@
             // 
             // ToolTip
             // 
-            this.ToolTip.AutomaticDelay = 50;
             this.ToolTip.ShowAlways = true;
+            this.ToolTip.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Error;
             // 
             // MainForm
             // 

@@ -27,10 +27,7 @@ namespace Programming.Model
             }
             set
             {
-                if (value <= 0)
-                {
-                    throw new ArgumentException();
-                }
+                Validator.AssertOnPositiveValue(value, nameof(Id));
                 _id = value;
             }
         }
@@ -47,10 +44,7 @@ namespace Programming.Model
             }
             set
             {
-                if (value <= 0)
-                {
-                    throw new ArgumentException();
-                }
+                Validator.AssertOnPositiveValue(value, nameof(DurationMinutes));
                 _durationMinutes = value;
             }
         }

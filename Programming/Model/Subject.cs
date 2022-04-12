@@ -5,6 +5,8 @@ namespace Programming.Model
     public class Subject
     {
         private int _position;
+        private string _lecturer;
+        private string _name;
 
         public Subject()
         { }
@@ -16,9 +18,31 @@ namespace Programming.Model
             Position = position;
         }
 
-        public string Name { get; set; }
+        public string Name
+        {
+            get
+            {
+                return _name;
+            }
+            set
+            {
+                Validator.AssertStringContainsOnlyLetters(value, nameof(Name));
+                _name = value;
+            }
+        }
 
-        public string Lecturer { get; set; }
+        public string Lecturer
+        {
+            get
+            {
+                return _lecturer;
+            }
+            set
+            {
+                Validator.AssertStringContainsOnlyLetters(value, nameof(Lecturer));
+                _lecturer = value;
+            }
+        }
 
         public int Position 
         {
@@ -28,10 +52,7 @@ namespace Programming.Model
             }
             set
             {
-                if (value <= 0)
-                {
-                    throw new ArgumentException();
-                }
+                Validator.AssertOnPositiveValue(value, nameof(Position));
                 _position = value;
             }
         }

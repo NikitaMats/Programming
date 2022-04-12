@@ -171,10 +171,10 @@ namespace Programming.View
                 _currentRectangle.Length = Convert.ToDouble(LenghtTextBox.Text);
                 ToolTip.SetToolTip(MovieDurationTextBox, "");
             }
-            catch
+            catch (Exception exception)
             {
                 LenghtTextBox.BackColor = ColorTranslator.FromHtml(_errorСolor);
-                ToolTip.SetToolTip(MovieDurationTextBox, "Error");
+                ToolTip.SetToolTip(MovieDurationTextBox, exception.Message);
             }
         }
 
@@ -186,10 +186,10 @@ namespace Programming.View
                 _currentRectangle.Width = Convert.ToDouble(WidthTextBox.Text);
                 ToolTip.SetToolTip(MovieDurationTextBox, "");
             }
-            catch
+            catch (Exception exception)
             {
                 WidthTextBox.BackColor = ColorTranslator.FromHtml(_errorСolor);
-                ToolTip.SetToolTip(MovieDurationTextBox, "Error");
+                ToolTip.SetToolTip(MovieDurationTextBox, exception.Message);
             }
         }
 
@@ -233,9 +233,9 @@ namespace Programming.View
                 _currentMovie.DurationMinutes = Convert.ToInt32(MovieDurationTextBox.Text);
                 ToolTip.SetToolTip(MovieDurationTextBox, "");
             }
-            catch
+            catch (Exception exception)
             {
-                ToolTip.SetToolTip(MovieDurationTextBox, "Error");
+                ToolTip.SetToolTip(MovieDurationTextBox, exception.Message);
                 MovieDurationTextBox.BackColor = ColorTranslator.FromHtml(_errorСolor);
             }
         }
@@ -246,12 +246,12 @@ namespace Programming.View
             try
             {
                 _currentMovie.ReleaseYear = Convert.ToInt32(MovieReleaseTextBox.Text);
-                ToolTip.SetToolTip(MovieDurationTextBox, "");
+                ToolTip.SetToolTip(MovieReleaseTextBox, "");
             }
-            catch
+            catch (Exception exception)
             {
                 MovieReleaseTextBox.BackColor = ColorTranslator.FromHtml(_errorСolor);
-                ToolTip.SetToolTip(MovieDurationTextBox, "Error");
+                ToolTip.SetToolTip(MovieReleaseTextBox, exception.Message);
             }
         }
         
@@ -261,12 +261,12 @@ namespace Programming.View
             try
             {
                 _currentMovie.Rating = Convert.ToDouble(MovieRatingTextBox.Text);
-                ToolTip.SetToolTip(MovieDurationTextBox, "");
+                ToolTip.SetToolTip(MovieRatingTextBox, "");
             }
-            catch
+            catch (Exception exception)
             {
                 MovieRatingTextBox.BackColor = ColorTranslator.FromHtml(_errorСolor);
-                ToolTip.SetToolTip(MovieDurationTextBox, "Error");
+                ToolTip.SetToolTip(MovieRatingTextBox, exception.Message);
             }
         }
 

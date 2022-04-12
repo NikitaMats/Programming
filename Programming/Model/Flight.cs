@@ -15,6 +15,7 @@ namespace Programming.Model
             Destination = destination;
             FlightTimeMinutes = flightTimeMinutes;
         }
+
         public string Departure { get; set; }
 
         public string Destination { get; set; }
@@ -27,10 +28,7 @@ namespace Programming.Model
             }
             set
             {
-                if (value <= 0)
-                {
-                    throw new ArgumentException();
-                }
+                Validator.AssertOnPositiveValue(value, nameof(FlightTimeMinutes));
                 _flightTimeMinutes = value;
             }
         }
