@@ -4,7 +4,7 @@ namespace Programming.Model
 {
     public class Сontact
     {
-        private const int _phoneLenght = 11;
+        private const int _phoneLength = 11;
         private string _number;
         private string _name;
         private string _surname;
@@ -27,7 +27,7 @@ namespace Programming.Model
             }
             set 
             {
-                if (value.Length != _phoneLenght)
+                if (value.Length != _phoneLength)
                 {
                     throw new ArgumentException();
                 }

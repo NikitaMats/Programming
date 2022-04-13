@@ -8,9 +8,7 @@ namespace Programming.Model
 
         private double _innerRadius;
 
-        public Ring(Point2D center,
-                    double outerRadius,
-                    double innerRadius)
+        public Ring(Point2D center, double outerRadius, double innerRadius)
         {
             Center = center;
             OuterRadius = outerRadius;

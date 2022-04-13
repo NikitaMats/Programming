@@ -13,11 +13,14 @@ namespace Programming.Model
         private int _id;
 
         public Rectangle()
-        {}
-
-        public Rectangle(double lenght, double width, string color, Point2D center)
         {
-            Length = lenght;
+            _allRectanglesCount++;
+            _id = _allRectanglesCount;
+        }
+
+        public Rectangle(double length, double width, string color, Point2D center)
+        {
+            Length = length;
             Width = width;
             Color = color;
             Center = center;

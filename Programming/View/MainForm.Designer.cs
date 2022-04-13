@@ -63,6 +63,8 @@
             this.FindMovieButton = new System.Windows.Forms.Button();
             this.MoviesListBox = new System.Windows.Forms.ListBox();
             this.RectangleGroupBox = new System.Windows.Forms.GroupBox();
+            this.CollisionLable = new System.Windows.Forms.Label();
+            this.IdRectangle = new System.Windows.Forms.Label();
             this.Ycoordinate = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
@@ -72,12 +74,10 @@
             this.label3 = new System.Windows.Forms.Label();
             this.WidthTextBox = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.LenghtTextBox = new System.Windows.Forms.TextBox();
+            this.LengthTextBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.RectanglesListBox = new System.Windows.Forms.ListBox();
             this.ToolTip = new System.Windows.Forms.ToolTip(this.components);
-            this.IdRectangle = new System.Windows.Forms.Label();
-            this.CollisionLable = new System.Windows.Forms.Label();
             this.TabControl.SuspendLayout();
             this.EnamsTabPage.SuspendLayout();
             this.SeasonGroupBox.SuspendLayout();
@@ -464,7 +464,7 @@
             this.RectangleGroupBox.Controls.Add(this.label3);
             this.RectangleGroupBox.Controls.Add(this.WidthTextBox);
             this.RectangleGroupBox.Controls.Add(this.label2);
-            this.RectangleGroupBox.Controls.Add(this.LenghtTextBox);
+            this.RectangleGroupBox.Controls.Add(this.LengthTextBox);
             this.RectangleGroupBox.Controls.Add(this.label1);
             this.RectangleGroupBox.Controls.Add(this.RectanglesListBox);
             this.RectangleGroupBox.Dock = System.Windows.Forms.DockStyle.Left;
@@ -476,6 +476,24 @@
             this.RectangleGroupBox.TabIndex = 0;
             this.RectangleGroupBox.TabStop = false;
             this.RectangleGroupBox.Text = "Rectangles";
+            // 
+            // CollisionLable
+            // 
+            this.CollisionLable.AutoSize = true;
+            this.CollisionLable.Location = new System.Drawing.Point(246, 296);
+            this.CollisionLable.Name = "CollisionLable";
+            this.CollisionLable.Size = new System.Drawing.Size(61, 16);
+            this.CollisionLable.TabIndex = 13;
+            this.CollisionLable.Text = "Collision:";
+            // 
+            // IdRectangle
+            // 
+            this.IdRectangle.AutoSize = true;
+            this.IdRectangle.Location = new System.Drawing.Point(185, 296);
+            this.IdRectangle.Name = "IdRectangle";
+            this.IdRectangle.Size = new System.Drawing.Size(21, 16);
+            this.IdRectangle.TabIndex = 12;
+            this.IdRectangle.Text = "id:";
             // 
             // Ycoordinate
             // 
@@ -558,14 +576,14 @@
             this.label2.TabIndex = 3;
             this.label2.Text = "Width:";
             // 
-            // LenghtTextBox
+            // LengthTextBox
             // 
-            this.LenghtTextBox.Location = new System.Drawing.Point(185, 44);
-            this.LenghtTextBox.Margin = new System.Windows.Forms.Padding(4);
-            this.LenghtTextBox.Name = "LenghtTextBox";
-            this.LenghtTextBox.Size = new System.Drawing.Size(160, 22);
-            this.LenghtTextBox.TabIndex = 2;
-            this.LenghtTextBox.TextChanged += new System.EventHandler(this.LenghtTextBox_TextChanged);
+            this.LengthTextBox.Location = new System.Drawing.Point(185, 44);
+            this.LengthTextBox.Margin = new System.Windows.Forms.Padding(4);
+            this.LengthTextBox.Name = "LengthTextBox";
+            this.LengthTextBox.Size = new System.Drawing.Size(160, 22);
+            this.LengthTextBox.TabIndex = 2;
+            this.LengthTextBox.TextChanged += new System.EventHandler(this.LengthTextBox_TextChanged);
             // 
             // label1
             // 
@@ -575,7 +593,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(50, 16);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Lenght:";
+            this.label1.Text = "Length:";
             // 
             // RectanglesListBox
             // 
@@ -592,24 +610,6 @@
             // 
             this.ToolTip.ShowAlways = true;
             this.ToolTip.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Error;
-            // 
-            // IdRectangle
-            // 
-            this.IdRectangle.AutoSize = true;
-            this.IdRectangle.Location = new System.Drawing.Point(185, 296);
-            this.IdRectangle.Name = "IdRectangle";
-            this.IdRectangle.Size = new System.Drawing.Size(21, 16);
-            this.IdRectangle.TabIndex = 12;
-            this.IdRectangle.Text = "id:";
-            // 
-            // CollisionLable
-            // 
-            this.CollisionLable.AutoSize = true;
-            this.CollisionLable.Location = new System.Drawing.Point(246, 296);
-            this.CollisionLable.Name = "CollisionLable";
-            this.CollisionLable.Size = new System.Drawing.Size(61, 16);
-            this.CollisionLable.TabIndex = 13;
-            this.CollisionLable.Text = "Collision:";
             // 
             // MainForm
             // 
@@ -666,7 +666,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox WidthTextBox;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox LenghtTextBox;
+        private System.Windows.Forms.TextBox LengthTextBox;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ListBox RectanglesListBox;
         private System.Windows.Forms.Button FindRectangleButton;

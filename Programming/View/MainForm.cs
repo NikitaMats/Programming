@@ -161,7 +161,7 @@ namespace Programming.View
         {
             var selectedRectangle = RectanglesListBox.SelectedIndex;
             _currentRectangle = _rectangles[selectedRectangle];
-            LenghtTextBox.Text = _currentRectangle.Length.ToString();
+            LengthTextBox.Text = _currentRectangle.Length.ToString();
             WidthTextBox.Text = _currentRectangle.Width.ToString();
             ColorTextBox.Text = _currentRectangle.Color;
             Xcoordinate.Text = _currentRectangle.Center.X.ToString();
@@ -177,17 +177,17 @@ namespace Programming.View
             }
         }
 
-        private void LenghtTextBox_TextChanged(object sender, EventArgs e)
+        private void LengthTextBox_TextChanged(object sender, EventArgs e)
         {
-            LenghtTextBox.BackColor = ColorTranslator.FromHtml(_normalColor);
+            LengthTextBox.BackColor = ColorTranslator.FromHtml(_normalColor);
             try
             {
-                _currentRectangle.Length = Convert.ToDouble(LenghtTextBox.Text);
+                _currentRectangle.Length = Convert.ToDouble(LengthTextBox.Text);
                 ToolTip.SetToolTip(MovieDurationTextBox, "");
             }
             catch (Exception exception)
             {
-                LenghtTextBox.BackColor = ColorTranslator.FromHtml(_errorСolor);
+                LengthTextBox.BackColor = ColorTranslator.FromHtml(_errorСolor);
                 ToolTip.SetToolTip(MovieDurationTextBox, exception.Message);
             }
         }
