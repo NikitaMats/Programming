@@ -4,6 +4,7 @@ namespace Programming.Model
 {
     public class Ring
     {
+
         private double _outerRadius;
 
         private double _innerRadius;
