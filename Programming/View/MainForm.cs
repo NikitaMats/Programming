@@ -161,8 +161,8 @@ namespace Programming.View
         {
             var selectedRectangle = RectanglesListBox.SelectedIndex;
             _currentRectangle = _rectangles[selectedRectangle];
-            LengthTextBox.Text = _currentRectangle.Length.ToString();
-            WidthTextBox.Text = _currentRectangle.Width.ToString();
+            LengthBox.Text = _currentRectangle.Length.ToString();
+            WidthBox.Text = _currentRectangle.Width.ToString();
             ColorTextBox.Text = _currentRectangle.Color;
             Xcoordinate.Text = _currentRectangle.Center.X.ToString();
             Ycoordinate.Text = _currentRectangle.Center.Y.ToString();
@@ -179,30 +179,30 @@ namespace Programming.View
 
         private void LengthTextBox_TextChanged(object sender, EventArgs e)
         {
-            LengthTextBox.BackColor = ColorTranslator.FromHtml(_normalColor);
+            LengthBox.BackColor = ColorTranslator.FromHtml(_normalColor);
             try
             {
-                _currentRectangle.Length = Convert.ToDouble(LengthTextBox.Text);
+                _currentRectangle.Length = Convert.ToDouble(LengthBox.Text);
                 ToolTip.SetToolTip(MovieDurationTextBox, "");
             }
             catch (Exception exception)
             {
-                LengthTextBox.BackColor = ColorTranslator.FromHtml(_errorСolor);
+                LengthBox.BackColor = ColorTranslator.FromHtml(_errorСolor);
                 ToolTip.SetToolTip(MovieDurationTextBox, exception.Message);
             }
         }
 
         private void WidthTextBox_TextChanged(object sender, EventArgs e)
         {
-            WidthTextBox.BackColor = ColorTranslator.FromHtml(_normalColor);
+            WidthBox.BackColor = ColorTranslator.FromHtml(_normalColor);
             try
             {
-                _currentRectangle.Width = Convert.ToDouble(WidthTextBox.Text);
+                _currentRectangle.Width = Convert.ToDouble(WidthBox.Text);
                 ToolTip.SetToolTip(MovieDurationTextBox, "");
             }
             catch (Exception exception)
             {
-                WidthTextBox.BackColor = ColorTranslator.FromHtml(_errorСolor);
+                WidthBox.BackColor = ColorTranslator.FromHtml(_errorСolor);
                 ToolTip.SetToolTip(MovieDurationTextBox, exception.Message);
             }
         }
@@ -288,6 +288,26 @@ namespace Programming.View
         {
             int indexFindMovie = FindMovieWithMaxRating(_movies);
             MoviesListBox.SelectedIndex = indexFindMovie;
+        }
+
+        private void CreateButton_MouseMove(object sender, MouseEventArgs e)
+        {
+            CreateButton.BackgroundImage = Properties.Resources.rectangle_add_24x24;
+        }
+
+        private void CreateButton_MouseLeave(object sender, EventArgs e)
+        {
+            CreateButton.BackgroundImage = Properties.Resources.rectangle_add_24x24_uncolor;
+        }
+
+        private void DeleteButton_MouseMove(object sender, MouseEventArgs e)
+        {
+            DeleteButton.BackgroundImage = Properties.Resources.rectangle_remove_24x24;
+        }
+
+        private void DeleteButton_MouseLeave(object sender, EventArgs e)
+        {
+            DeleteButton.BackgroundImage = Properties.Resources.rectangle_remove_24x24_uncolor;
         }
     }
 }

@@ -83,6 +83,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -96,6 +97,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rectangle_add_24x24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rectangle_add_24x24_uncolor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rectangle_remove_24x24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rectangle_remove_24x24_uncolor.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
