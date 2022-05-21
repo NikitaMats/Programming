@@ -57,6 +57,42 @@
     <Compile Include="Model\Movie.cs" />
     <Compile Include="Model\Flight.cs" />
     <Compile Include="Model\Rectangle.cs" />
+    <Compile Include="View\Control\EnumerationsControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\Control\EnumerationsControl.Designer.cs">
+      <DependentUpon>EnumerationsControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Control\MoviesControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\Control\MoviesControl.Designer.cs">
+      <DependentUpon>MoviesControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Control\RectanglesControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\Control\RectanglesControl.Designer.cs">
+      <DependentUpon>RectanglesControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Control\RectanglesPanelControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\Control\RectanglesPanelControl.Designer.cs">
+      <DependentUpon>RectanglesPanelControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Control\SeasonControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\Control\SeasonControl.Designer.cs">
+      <DependentUpon>SeasonControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Control\WeekdayControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\Control\WeekdayControl.Designer.cs">
+      <DependentUpon>WeekdayControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\Enums.cs" />
     <Compile Include="View\MainForm.cs">
       <SubType>Form</SubType>
@@ -72,6 +108,24 @@
     <Compile Include="Model\Enums\Weekday.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="View\Control\EnumerationsControl.resx">
+      <DependentUpon>EnumerationsControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Control\MoviesControl.resx">
+      <DependentUpon>MoviesControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Control\RectanglesControl.resx">
+      <DependentUpon>RectanglesControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Control\RectanglesPanelControl.resx">
+      <DependentUpon>RectanglesPanelControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Control\SeasonControl.resx">
+      <DependentUpon>SeasonControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Control\WeekdayControl.resx">
+      <DependentUpon>WeekdayControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
