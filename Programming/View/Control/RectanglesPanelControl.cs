@@ -9,17 +9,10 @@ namespace Programming.View.Control
 {
     public partial class RectanglesPanelControl : UserControl
     {
-        private List<Rectangle> _rectangles = new List<Rectangle>();
-
-        private List<Panel> _rectanglePanels = new List<Panel>();
-
-        private Rectangle _currentRectangle = new Rectangle();
-
         public RectanglesPanelControl()
         {
             InitializeComponent();
         }
-        
 
         private void CreateButton_MouseMove(object sender, MouseEventArgs e)
         {
