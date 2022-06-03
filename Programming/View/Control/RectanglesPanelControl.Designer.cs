@@ -58,6 +58,7 @@
             this.DeleteButton.Size = new System.Drawing.Size(100, 43);
             this.DeleteButton.TabIndex = 32;
             this.DeleteButton.TabStop = false;
+            this.DeleteButton.Click += new System.EventHandler(this.DeleteButton_Click);
             this.DeleteButton.MouseLeave += new System.EventHandler(this.DeleteButton_MouseLeave);
             this.DeleteButton.MouseMove += new System.Windows.Forms.MouseEventHandler(this.DeleteButton_MouseMove);
             // 
@@ -72,6 +73,7 @@
             this.CreateButton.Size = new System.Drawing.Size(100, 43);
             this.CreateButton.TabIndex = 31;
             this.CreateButton.TabStop = false;
+            this.CreateButton.Click += new System.EventHandler(this.CreateButton_Click);
             this.CreateButton.MouseLeave += new System.EventHandler(this.CreateButton_MouseLeave);
             this.CreateButton.MouseMove += new System.Windows.Forms.MouseEventHandler(this.CreateButton_MouseMove);
             // 

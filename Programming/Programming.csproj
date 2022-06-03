@@ -48,6 +48,7 @@
   <ItemGroup>
     <Compile Include="Model\Geometry\CollisionManager.cs" />
     <Compile Include="Model\Geometry\Point2D.cs" />
+    <Compile Include="Model\Geometry\RectangleFactory.cs" />
     <Compile Include="Model\Geometry\Ring.cs" />
     <Compile Include="Model\Validator.cs" />
     <Compile Include="Model\Song.cs" />
