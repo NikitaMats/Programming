@@ -15,24 +15,11 @@ namespace Programming.View.Control
 
         private Rectangle _currentRectangle = new Rectangle();
 
-        private static Random _random;
-
         public RectanglesPanelControl()
         {
             InitializeComponent();
         }
         
-        public static Rectangle Randomize(int widthCanvas, int heightCanvas)
-        {
-            var colors = Enum.GetValues(typeof(Colors));
-            Rectangle rectangle = new Rectangle();
-            rectangle.Width = _random.Next(30, 100);
-            rectangle.Length = _random.Next(30, 100);
-            rectangle.Center = new Point2D(_random.Next(15, widthCanvas - rectangle.Width - 15),
-                                           _random.Next(15, heightCanvas - rectangle.Height - 15));
-            rectangle.Color = colors.GetValue(_random.Next(0, colors.Length)).ToString();
-            return rectangle;
-        }
 
         private void CreateButton_MouseMove(object sender, MouseEventArgs e)
         {
@@ -59,9 +46,5 @@ namespace Programming.View.Control
 
         }
 
-        private void CreateButton_Click(object sender, EventArgs e)
-        {
-            _currentRectangle = Rectangle.Randomize(CanvasPanel.Width, CanvasPanel.Height);
-        }
     }
 }

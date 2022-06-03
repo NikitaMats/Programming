@@ -72,7 +72,6 @@
             this.CreateButton.Size = new System.Drawing.Size(100, 43);
             this.CreateButton.TabIndex = 31;
             this.CreateButton.TabStop = false;
-            this.CreateButton.Click += new System.EventHandler(this.CreateButton_Click);
             this.CreateButton.MouseLeave += new System.EventHandler(this.CreateButton_MouseLeave);
             this.CreateButton.MouseMove += new System.Windows.Forms.MouseEventHandler(this.CreateButton_MouseMove);
             // 
