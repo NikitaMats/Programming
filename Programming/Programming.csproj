@@ -76,11 +76,11 @@
     <Compile Include="View\Control\RectanglesControl.Designer.cs">
       <DependentUpon>RectanglesControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\Control\RectanglesPanelControl.cs">
+    <Compile Include="View\Control\RectanglesCollisionControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="View\Control\RectanglesPanelControl.Designer.cs">
-      <DependentUpon>RectanglesPanelControl.cs</DependentUpon>
+    <Compile Include="View\Control\RectanglesCollisionControl.Designer.cs">
+      <DependentUpon>RectanglesCollisionControl.cs</DependentUpon>
     </Compile>
     <Compile Include="View\Control\SeasonControl.cs">
       <SubType>UserControl</SubType>
@@ -118,8 +118,8 @@
     <EmbeddedResource Include="View\Control\RectanglesControl.resx">
       <DependentUpon>RectanglesControl.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\Control\RectanglesPanelControl.resx">
-      <DependentUpon>RectanglesPanelControl.cs</DependentUpon>
+    <EmbeddedResource Include="View\Control\RectanglesCollisionControl.resx">
+      <DependentUpon>RectanglesCollisionControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Control\SeasonControl.resx">
       <DependentUpon>SeasonControl.cs</DependentUpon>

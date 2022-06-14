@@ -35,18 +35,18 @@ namespace Programming.View.Control
             }
             return indexOfMaxRating;
         }
-
         public MoviesControl()
         {
+            
             InitializeComponent();
             _movies = new Movie[5]
-            {
+               {
                 new Movie("The Green Mile", 189, 1999, "Drama", 9.1),
                 new Movie("Intouchables", 112, 2011, "Drama", 8.8),
                 new Movie("Interstellar", 169, 2014, "Science fiction", 7),
                 new Movie("Back to the Future", 116, 1985, "Science fiction", 8.7),
                 new Movie("WALL·E", 98, 2008, "Сartoon", 8.6),
-            };
+               };
 
             foreach (var movie in _movies)
             {

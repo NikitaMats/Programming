@@ -69,6 +69,7 @@
             this.Ycoordinate.Name = "Ycoordinate";
             this.Ycoordinate.Size = new System.Drawing.Size(160, 22);
             this.Ycoordinate.TabIndex = 25;
+            this.Ycoordinate.TextChanged += new System.EventHandler(this.Ycoordinate_TextChanged);
             // 
             // label10
             // 
@@ -95,6 +96,7 @@
             this.Xcoordinate.Name = "Xcoordinate";
             this.Xcoordinate.Size = new System.Drawing.Size(160, 22);
             this.Xcoordinate.TabIndex = 22;
+            this.Xcoordinate.TextChanged += new System.EventHandler(this.Xcoordinate_TextChanged);
             // 
             // FindRectangleButton
             // 

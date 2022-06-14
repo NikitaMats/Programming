@@ -120,5 +120,35 @@ namespace Programming.View.Control
             int indexFindRectangle = FindRectangleWithMaxWidth(_rectangles);
             RectanglesListBox.SelectedIndex = indexFindRectangle;
         }
+
+        private void Xcoordinate_TextChanged(object sender, EventArgs e)
+        {
+            Xcoordinate.BackColor = ColorTranslator.FromHtml(_normalColor);
+            try
+            {
+                 double XcoordinateTxT = Convert.ToDouble(Xcoordinate.Text);
+                _toolTip.SetToolTip(Xcoordinate, "");
+            }
+            catch (Exception exception)
+            {
+                Xcoordinate.BackColor = ColorTranslator.FromHtml(_errorСolor);
+                _toolTip.SetToolTip(Xcoordinate, exception.Message);
+            }
+        }
+
+        private void Ycoordinate_TextChanged(object sender, EventArgs e)
+        {
+            Ycoordinate.BackColor = ColorTranslator.FromHtml(_normalColor);
+            try
+            {
+                double YcoordinateTxT = Convert.ToDouble(Ycoordinate.Text);
+                _toolTip.SetToolTip(Xcoordinate, "");
+            }
+            catch (Exception exception)
+            {
+                Ycoordinate.BackColor = ColorTranslator.FromHtml(_errorСolor);
+                _toolTip.SetToolTip(Ycoordinate, exception.Message);
+            }
+        }
     }
 }
