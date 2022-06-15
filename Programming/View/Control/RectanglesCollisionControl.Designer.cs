@@ -41,9 +41,9 @@
             this.XCoordinateTextBox = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.idTextBox = new System.Windows.Forms.TextBox();
-            this.CanvasPanel = new System.Windows.Forms.Panel();
             this.label11 = new System.Windows.Forms.Label();
             this.RectangleListBox = new System.Windows.Forms.ListBox();
+            this.CanvasPanel = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.DeleteButton)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CreateButton)).BeginInit();
             this.SuspendLayout();
@@ -52,8 +52,8 @@
             // 
             this.DeleteButton.BackgroundImage = global::Programming.Properties.Resources.rectangle_remove_24x24_uncolor;
             this.DeleteButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.DeleteButton.Location = new System.Drawing.Point(182, 166);
-            this.DeleteButton.Margin = new System.Windows.Forms.Padding(4);
+            this.DeleteButton.Location = new System.Drawing.Point(181, 166);
+            this.DeleteButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.DeleteButton.Name = "DeleteButton";
             this.DeleteButton.Size = new System.Drawing.Size(100, 43);
             this.DeleteButton.TabIndex = 32;
@@ -67,7 +67,7 @@
             this.CreateButton.BackgroundImage = global::Programming.Properties.Resources.rectangle_add_24x24_uncolor;
             this.CreateButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.CreateButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.CreateButton.Location = new System.Drawing.Point(30, 165);
+            this.CreateButton.Location = new System.Drawing.Point(29, 165);
             this.CreateButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.CreateButton.Name = "CreateButton";
             this.CreateButton.Size = new System.Drawing.Size(100, 43);
@@ -89,7 +89,7 @@
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(27, 312);
+            this.label16.Location = new System.Drawing.Point(27, 313);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(44, 16);
             this.label16.TabIndex = 27;
@@ -107,7 +107,7 @@
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(54, 260);
+            this.label14.Location = new System.Drawing.Point(53, 260);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(18, 16);
             this.label14.TabIndex = 28;
@@ -161,7 +161,7 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(10, 210);
+            this.label12.Location = new System.Drawing.Point(11, 210);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(129, 16);
             this.label12.TabIndex = 22;
@@ -176,22 +176,10 @@
             this.idTextBox.Size = new System.Drawing.Size(113, 22);
             this.idTextBox.TabIndex = 20;
             // 
-            // CanvasPanel
-            // 
-            this.CanvasPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.CanvasPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.CanvasPanel.Location = new System.Drawing.Point(322, 0);
-            this.CanvasPanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.CanvasPanel.Name = "CanvasPanel";
-            this.CanvasPanel.Size = new System.Drawing.Size(451, 382);
-            this.CanvasPanel.TabIndex = 19;
-            // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(10, 4);
+            this.label11.Location = new System.Drawing.Point(11, 4);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(79, 16);
             this.label11.TabIndex = 18;
@@ -201,17 +189,30 @@
             // 
             this.RectangleListBox.FormattingEnabled = true;
             this.RectangleListBox.ItemHeight = 16;
-            this.RectangleListBox.Location = new System.Drawing.Point(10, 27);
+            this.RectangleListBox.Location = new System.Drawing.Point(11, 27);
             this.RectangleListBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.RectangleListBox.Name = "RectangleListBox";
             this.RectangleListBox.Size = new System.Drawing.Size(293, 132);
             this.RectangleListBox.TabIndex = 17;
             this.RectangleListBox.SelectedIndexChanged += new System.EventHandler(this.RectangleListBox_SelectedIndexChanged);
             // 
-            // RectanglesPanelControl
+            // CanvasPanel
+            // 
+            this.CanvasPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.CanvasPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.CanvasPanel.Location = new System.Drawing.Point(329, 4);
+            this.CanvasPanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.CanvasPanel.Name = "CanvasPanel";
+            this.CanvasPanel.Size = new System.Drawing.Size(533, 430);
+            this.CanvasPanel.TabIndex = 33;
+            // 
+            // RectanglesCollisionControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.CanvasPanel);
             this.Controls.Add(this.DeleteButton);
             this.Controls.Add(this.CreateButton);
             this.Controls.Add(this.label17);
@@ -225,11 +226,11 @@
             this.Controls.Add(this.XCoordinateTextBox);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.idTextBox);
-            this.Controls.Add(this.CanvasPanel);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.RectangleListBox);
-            this.Name = "RectanglesPanelControl";
-            this.Size = new System.Drawing.Size(776, 382);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Name = "RectanglesCollisionControl";
+            this.Size = new System.Drawing.Size(865, 437);
             ((System.ComponentModel.ISupportInitialize)(this.DeleteButton)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CreateButton)).EndInit();
             this.ResumeLayout(false);
@@ -252,8 +253,8 @@
         private System.Windows.Forms.TextBox XCoordinateTextBox;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.TextBox idTextBox;
-        private System.Windows.Forms.Panel CanvasPanel;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.ListBox RectangleListBox;
+        private System.Windows.Forms.Panel CanvasPanel;
     }
 }

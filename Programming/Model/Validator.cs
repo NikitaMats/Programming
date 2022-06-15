@@ -22,7 +22,7 @@ namespace Programming.Model
 
         public static void AssertValueInRange(int value, int min, int max, string fieldName) 
         {
-            if (!(value <= max || value >= min))
+            if (!(value <= max && value >= min))
             {
                 throw new ArgumentException($"Введите корректное значение {fieldName}");
             }
@@ -30,7 +30,7 @@ namespace Programming.Model
 
         public static void AssertValueInRange(double value, double min, double max, string fieldName)
         {
-            if (!(value <= max || value >= min))
+            if (!(value <= max && value >= min))
             {
                 throw new ArgumentException($"Введите корректное значение {fieldName}");
             }

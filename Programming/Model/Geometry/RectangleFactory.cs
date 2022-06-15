@@ -14,25 +14,14 @@ namespace Programming.Model.Geometry
             _random = new Random();
         }
 
-        public static Rectangle Randomize(int widthCanvas, int heightCanvas)
+        public static Rectangle Randomize(int widthCanva, int heightCanva)
         {
             var colors = Enum.GetValues(typeof(Colors));
             Rectangle rectangle = new Rectangle();
             rectangle.Width = _random.Next(30, 100);
             rectangle.Length = _random.Next(30, 100);
-            rectangle.Center = new Point2D(_random.Next(Margin, (int)(widthCanvas - rectangle.Width - Margin)),
-                                           _random.Next(Margin, (int)(heightCanvas - rectangle.Length - Margin)));
-            rectangle.Color = colors.GetValue(_random.Next(0, colors.Length)).ToString();
-            return rectangle;
-        }
-
-        public static Rectangle Randomize()
-        {
-            var colors = Enum.GetValues(typeof(Colors));
-            Rectangle rectangle = new Rectangle();
-            rectangle.Center = new Point2D(_random.Next(1, 500), _random.Next(1, 500));
-            rectangle.Width = _random.Next(30, 100);
-            rectangle.Length = _random.Next(30, 100);
+            rectangle.Center = new Point2D(_random.Next(Margin, widthCanva - (int)rectangle.Width + Margin),
+                                           _random.Next(Margin, heightCanva - (int)rectangle.Length + Margin));
             rectangle.Color = colors.GetValue(_random.Next(0, colors.Length)).ToString();
             return rectangle;
         }
