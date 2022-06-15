@@ -2,15 +2,38 @@
 
 namespace Programming.Model
 {
+    /// <summary>
+    /// Хранит данные об образовательном предмете.
+    /// </summary>
     public class Subject
     {
+        /// <summary>
+        /// Номер дисциплины в списке.
+        /// </summary>
         private int _position;
+
+        /// <summary>
+        /// Преподаватель по дисциплине.
+        /// </summary>
         private string _lecturer;
+
+        /// <summary>
+        /// Название дисциплины.
+        /// </summary>
         private string _name;
 
+        /// <summary>
+        /// Создаёт экземпляр класса <see cref="Subject"/>.
+        /// </summary>
         public Subject()
         { }
 
+        /// <summary>
+        /// Создаёт экземпляр класса <see cref="Subject"/>.
+        /// </summary>
+        /// <param name="name">Название дисциплины.</param>
+        /// <param name="lecturer">Преподаватель по дисциплине.</param>
+        /// <param name="position">Номер дисциплины в списке.</param>
         public Subject(string name, string lecturer, int position)
         {
             Name = name;
@@ -18,6 +41,9 @@ namespace Programming.Model
             Position = position;
         }
 
+        /// <summary>
+        /// Возвращает и задаёт название дисциплины.
+        /// </summary>
         public string Name
         {
             get
@@ -31,6 +57,9 @@ namespace Programming.Model
             }
         }
 
+        /// <summary>
+        /// Возвращает и задает преподввтеля по дисциплине. Должно состоять только из букв.
+        /// </summary>
         public string Lecturer
         {
             get
@@ -44,6 +73,9 @@ namespace Programming.Model
             }
         }
 
+        /// <summary>
+        /// Возвращает и задает номер дисциплины в списке. Должно быть положительным числом.
+        /// </summary>
         public int Position 
         {
             get
