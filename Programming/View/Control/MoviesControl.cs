@@ -7,20 +7,46 @@ using System.Collections.Generic;
 
 namespace Programming.View.Control
 {
+    /// <summary>
+    /// Предоставляет реализацию по представлению фильмов.
+    /// </summary>
     public partial class MoviesControl : UserControl
     {
+        /// <summary>
+        /// Коллекция фильмов.
+        /// </summary>
         private Movie[] _movies;
 
+        /// <summary>
+        /// Выбранный фильм.
+        /// </summary>
         private Movie _currentMovie;
 
+        /// <summary>
+        /// Количество фильмов.
+        /// </summary>
         private int _moviesAmount = 5;
 
+        /// <summary>
+        /// Цвет ошибки.
+        /// </summary>
         private string _errorСolor = "LightPink";
 
+        /// <summary>
+        /// Цвет поля без ошибок.
+        /// </summary>
         private string _normalColor = "Window";
 
+        /// <summary>
+        /// Сообщение об ошибке
+        /// </summary>
         private ToolTip _toolTip = new ToolTip();
 
+        /// <summary>
+        /// Находит фильм, чей рейтинг больше остальных.
+        /// </summary>
+        /// <param name="movies">Коллекция фильмов.</param>
+        /// <returns>Возвращает индекс элемента , чей рейтинг выше остальных.</returns>
         private int FindMovieWithMaxRating(Movie[] movies)
         {
             int indexOfMaxRating = 0;
@@ -35,6 +61,10 @@ namespace Programming.View.Control
             }
             return indexOfMaxRating;
         }
+
+        /// <summary>
+        /// Создаёт экземпляр класса <see cref="MoviesControl"/>.
+        /// </summary>
         public MoviesControl()
         {
             

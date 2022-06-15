@@ -6,8 +6,14 @@ using Programming.Model.Enums;
 
 namespace Programming.View.Control
 {
+    /// <summary>
+    /// Предоставляет реализацию по парсингу дней недели.
+    /// </summary>
     public partial class WeekdayControl : UserControl
     {
+        /// <summary>
+        /// Создаёт экземпляр класса <see cref="WeekdayParsingControl"/>.
+        /// </summary>
         public WeekdayControl()
         {
             InitializeComponent();

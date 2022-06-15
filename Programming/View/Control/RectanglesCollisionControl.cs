@@ -9,30 +9,61 @@ using Rectangle = Programming.Model.Geometry.Rectangle;
 
 namespace Programming.View.Control
 {
+    /// <summary>
+    /// Предоставляет реализацию по проверке пересечения прямоугольников.
+    /// </summary>
     public partial class RectanglesCollisionControl : UserControl
     {
 
+        /// <summary>
+        /// Коллекция прямоугольников.
+        /// </summary>
         private List<Rectangle> _rectangles;
 
+        /// <summary>
+        /// Коллекция отображаемых прямоугольников.
+        /// </summary>
         private List<Panel> _rectanglePanels;
 
+        /// <summary>
+        /// Выбранный прямоугольник.
+        /// </summary>
         private Rectangle _currentRectangle;
 
+        /// <summary>
+        /// Цвет прямоугольника без пересечений.
+        /// </summary>
         private static Color NotCollision = Color.LightGreen;
 
-        private static Color Collision = Color.LightPink
-            ;
+        /// <summary>
+        /// Цвет пересекающихся прямоугольников.
+        /// </summary>
+        private static Color Collision = Color.LightPink;
+
+        /// <summary>
+        /// Цвет ошибки.
+        /// </summary>
         private static Color ErrorColor = Color.LightPink;
 
+        /// <summary>
+        /// Цвет отсутствия ошибки.
+        /// </summary>
         private static Color CorrectColor = Color.White;
 
+        /// <summary>
+        /// Создаёт экземпляр класса <see cref="RectanglesCollisionControl"/>.
+        /// </summary>
         public RectanglesCollisionControl()
         {
             InitializeComponent();
             _rectangles = new List<Rectangle>();
             _rectanglePanels = new List<Panel>();
         }
-
+        
+        /// <summary>
+        /// Создает новый прямоугольник на панели.
+        /// </summary>
+        /// <returns> Новую панель в качестве прямоугольника.</returns>
         private Panel CreatePanel()
         {
             Panel panel = new Panel();
@@ -44,6 +75,11 @@ namespace Programming.View.Control
             return panel;
         }
 
+        /// <summary>
+        /// Преобразует параметры прямоугольника в текст для ListBox.
+        /// </summary>
+        /// <param name="rectangle">Прямоугольник.</param>
+        /// <returns>Возвращает форматированный текст.</returns>
         private string FormattedText(Rectangle rectangle)
         {
             return $"{rectangle.Id}: " 
@@ -53,6 +89,9 @@ namespace Programming.View.Control
                     + $" H: {rectangle.Length})";
         }
 
+        /// <summary>
+        /// Находит пересекающиеся прямоугольники и перекрашивает их.
+        /// </summary>
         private void FindCollisions()
         {
             for (int i = 0; i < _rectanglePanels.Count; i++)
@@ -72,6 +111,9 @@ namespace Programming.View.Control
             }
         }
 
+        /// <summary>
+        /// Очищает информацию с текстовых полей и со списка.
+        /// </summary>
         private void ClearRectangleInfo()
         {
             RectangleListBox.Items.Clear();
@@ -82,6 +124,10 @@ namespace Programming.View.Control
             LengthTextBox.Clear();
         }
 
+        /// <summary>
+        /// Обновляет информацию в списке.
+        /// </summary>
+        /// <param name="rectangle">Прямоугольник.</param>
         private void UpdateRectangleInfo(Rectangle rectangle)
         {
             int ind = RectangleListBox.FindString(rectangle.Id.ToString());

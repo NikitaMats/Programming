@@ -5,8 +5,14 @@ using Programming.Model.Enums;
 
 namespace Programming.View.Control
 {
+    /// <summary>
+    /// Предоставляет реализацию по изменению цвета фона.
+    /// </summary>
     public partial class SeasonControl : UserControl
     {
+        /// <summary>
+        /// Создаёт экземпляр класса <see cref="SeasonControl"/>.
+        /// </summary>
         public SeasonControl()
         {
             InitializeComponent();

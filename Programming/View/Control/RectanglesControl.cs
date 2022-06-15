@@ -9,22 +9,49 @@ using Rectangle = Programming.Model.Geometry.Rectangle;
 
 namespace Programming.View.Control
 {
+    /// <summary>
+    /// Представляет реализацию по представлению прямоугольников, генерируемых программой.
+    /// </summary>
     public partial class RectanglesControl : UserControl
     {
+        /// <summary>
+        /// Сообщение об ошибке.
+        /// </summary>
         private ToolTip _toolTip = new ToolTip();
 
+        /// <summary>
+        /// Цвета прямоугольников.
+        /// </summary>
         private string[] _colors = { "Red", "Black", "Green", "Yellow", "Orange" };
 
+        /// <summary>
+        /// Коллекция прямоугольников.
+        /// </summary>
         private Rectangle[] _rectangles;
 
+        /// <summary>
+        /// Выбранный прямоугольник.
+        /// </summary>
         private Rectangle _currentRectangle;
 
+        /// <summary>
+        /// Количество прямоугольников.
+        /// </summary>
         private int _rectanglesAmount = 5;
 
+        /// <summary>
+        /// Цвет ошибки.
+        /// </summary>
         private string _errorСolor = "LightPink";
 
+        /// <summary>
+        /// Цвет отсутствия ошибки.
+        /// </summary>
         private string _normalColor = "Window";
 
+        /// <summary>
+        /// Создаёт экземпляр класса <see cref="RectanglesControl"/>.
+        /// </summary>
         public RectanglesControl()
         {
             InitializeComponent();
@@ -45,6 +72,11 @@ namespace Programming.View.Control
             RectanglesListBox.SelectedIndex = 0;
         }
 
+        /// <summary>
+        /// Находит прямоугольник, чья ширина больше остальных.
+        /// </summary>
+        /// <param name="rectangles">Прямоугольник.</param>
+        /// <returns>Индекс элемента коллекции, чья ширина больше остальных.</returns>
         private int FindRectangleWithMaxWidth(Rectangle[] rectangles)
         {
             int indexOfMaxWidth = 0;
