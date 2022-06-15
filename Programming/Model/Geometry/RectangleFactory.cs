@@ -3,17 +3,35 @@ using Programming.Model.Enums;
 
 namespace Programming.Model.Geometry
 {
+    /// <summary>
+    /// Реализует создание прямоугольника.
+    /// </summary>
     public static class RectangleFactory
     {
+        /// <summary>
+        /// Отступ внутри элемента размещения прямоугольников.
+        /// </summary>
         private const int Margin = 15;
 
+        /// <summary>
+        /// Случайные значения.
+        /// </summary>
         private static Random _random;
 
+        /// <summary>
+        /// Создаёт экземпляр класса <see cref="RectangleFactory"/>.
+        /// </summary>
         static RectangleFactory()
         {
             _random = new Random();
         }
 
+        /// <summary>
+        /// Создаёт прямоугольник со случайными значениями высоты, ширины и координат.
+        /// </summary>
+        /// <param name="widthCanva">Ширина элемента размещения.</param>
+        /// <param name="heightCanva">Высота элемента размещения.</param>
+        /// <returns>Возвращает объект Rectangle.</returns>
         public static Rectangle Randomize(int widthCanva, int heightCanva)
         {
             var colors = Enum.GetValues(typeof(Colors));
