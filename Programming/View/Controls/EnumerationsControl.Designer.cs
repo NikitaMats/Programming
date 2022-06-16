@@ -1,4 +1,4 @@
-﻿namespace Programming.View.Control
+﻿namespace Programming.View.Controls
 {
     partial class EnumerationsControl
     {

@@ -3,7 +3,7 @@ using System.Windows.Forms;
 using System.Drawing;
 using Programming.Model.Enums;
 
-namespace Programming.View.Control
+namespace Programming.View.Controls
 {
     /// <summary>
     /// Предоставляет реализацию по изменению цвета фона.

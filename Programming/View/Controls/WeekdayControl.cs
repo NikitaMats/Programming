@@ -4,7 +4,7 @@ using System.Windows.Forms;
 using Programming.Model;
 using Programming.Model.Enums;
 
-namespace Programming.View.Control
+namespace Programming.View.Controls
 {
     /// <summary>
     /// Предоставляет реализацию по парсингу дней недели.

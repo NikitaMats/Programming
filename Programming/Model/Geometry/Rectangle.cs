@@ -53,6 +53,9 @@ namespace Programming.Model.Geometry
             _id = _allRectanglesCount;
         }
 
+        /// <summary>
+        /// Возвращает количество прямоугольников.
+        /// </summary>
         public static int AllRectanglesCount
         {
             get

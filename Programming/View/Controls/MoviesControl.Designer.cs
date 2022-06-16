@@ -1,4 +1,4 @@
-﻿namespace Programming.View.Control
+﻿namespace Programming.View.Controls
 {
     partial class MoviesControl
     {
@@ -148,6 +148,7 @@
             this.FindMovieButton.TabIndex = 20;
             this.FindMovieButton.Text = "Find";
             this.FindMovieButton.UseVisualStyleBackColor = true;
+            this.FindMovieButton.Click += new System.EventHandler(this.FindMovieButton_Click);
             // 
             // MoviesListBox
             // 

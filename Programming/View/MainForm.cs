@@ -2,9 +2,9 @@
 
 namespace Programming.View
 {
-    public partial class MainForm : Form
+    public partial class mainForm : Form
     {
-        public MainForm()
+        public mainForm()
         {
             InitializeComponent();
         }

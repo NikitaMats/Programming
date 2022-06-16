@@ -7,7 +7,7 @@ using Programming.Properties;
 using Rectangle = Programming.Model.Geometry.Rectangle;
 
 
-namespace Programming.View.Control
+namespace Programming.View.Controls
 {
     /// <summary>
     /// Предоставляет реализацию по проверке пересечения прямоугольников.
@@ -202,6 +202,7 @@ namespace Programming.View.Control
             CanvasPanel.Controls.Add(rectanglePanel);
             FindCollisions();
         }
+
         private void XCoordinateTextBox_TextChanged(object sender, EventArgs e)
         {
             if (RectangleListBox.SelectedIndex == -1) return;

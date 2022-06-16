@@ -58,40 +58,40 @@
     <Compile Include="Model\Movie.cs" />
     <Compile Include="Model\Flight.cs" />
     <Compile Include="Model\Geometry\Rectangle.cs" />
-    <Compile Include="View\Control\EnumerationsControl.cs">
+    <Compile Include="View\Controls\EnumerationsControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="View\Control\EnumerationsControl.Designer.cs">
+    <Compile Include="View\Controls\EnumerationsControl.Designer.cs">
       <DependentUpon>EnumerationsControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\Control\MoviesControl.cs">
+    <Compile Include="View\Controls\MoviesControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="View\Control\MoviesControl.Designer.cs">
+    <Compile Include="View\Controls\MoviesControl.Designer.cs">
       <DependentUpon>MoviesControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\Control\RectanglesControl.cs">
+    <Compile Include="View\Controls\RectanglesControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="View\Control\RectanglesControl.Designer.cs">
+    <Compile Include="View\Controls\RectanglesControl.Designer.cs">
       <DependentUpon>RectanglesControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\Control\RectanglesCollisionControl.cs">
+    <Compile Include="View\Controls\RectanglesCollisionControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="View\Control\RectanglesCollisionControl.Designer.cs">
+    <Compile Include="View\Controls\RectanglesCollisionControl.Designer.cs">
       <DependentUpon>RectanglesCollisionControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\Control\SeasonControl.cs">
+    <Compile Include="View\Controls\SeasonControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="View\Control\SeasonControl.Designer.cs">
+    <Compile Include="View\Controls\SeasonControl.Designer.cs">
       <DependentUpon>SeasonControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\Control\WeekdayControl.cs">
+    <Compile Include="View\Controls\WeekdayControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="View\Control\WeekdayControl.Designer.cs">
+    <Compile Include="View\Controls\WeekdayControl.Designer.cs">
       <DependentUpon>WeekdayControl.cs</DependentUpon>
     </Compile>
     <Compile Include="View\Enums.cs" />
@@ -109,22 +109,22 @@
     <Compile Include="Model\Enums\Weekday.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="View\Control\EnumerationsControl.resx">
+    <EmbeddedResource Include="View\Controls\EnumerationsControl.resx">
       <DependentUpon>EnumerationsControl.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\Control\MoviesControl.resx">
+    <EmbeddedResource Include="View\Controls\MoviesControl.resx">
       <DependentUpon>MoviesControl.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\Control\RectanglesControl.resx">
+    <EmbeddedResource Include="View\Controls\RectanglesControl.resx">
       <DependentUpon>RectanglesControl.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\Control\RectanglesCollisionControl.resx">
+    <EmbeddedResource Include="View\Controls\RectanglesCollisionControl.resx">
       <DependentUpon>RectanglesCollisionControl.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\Control\SeasonControl.resx">
+    <EmbeddedResource Include="View\Controls\SeasonControl.resx">
       <DependentUpon>SeasonControl.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\Control\WeekdayControl.resx">
+    <EmbeddedResource Include="View\Controls\WeekdayControl.resx">
       <DependentUpon>WeekdayControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\MainForm.resx">

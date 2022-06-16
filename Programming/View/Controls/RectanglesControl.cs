@@ -7,7 +7,7 @@ using System.Collections.Generic;
 using Rectangle = Programming.Model.Geometry.Rectangle;
 
 
-namespace Programming.View.Control
+namespace Programming.View.Controls
 {
     /// <summary>
     /// Представляет реализацию по представлению прямоугольников, генерируемых программой.
