@@ -177,6 +177,7 @@
             this.Controls.Add(this.NameTextBox);
             this.Controls.Add(this.StudentsListBox);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MinimumSize = new System.Drawing.Size(818, 497);
             this.Name = "MainForm";
             this.Text = "StudentList";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.MainForm_FormClosed);

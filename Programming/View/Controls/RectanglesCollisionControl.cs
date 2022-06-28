@@ -56,7 +56,9 @@ namespace Programming.View.Controls
         public RectanglesCollisionControl()
         {
             InitializeComponent();
+
             _rectangles = new List<Rectangle>();
+
             _rectanglePanels = new List<Panel>();
         }
         
