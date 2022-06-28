@@ -1,11 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace StudentList.Model.Enums
+﻿namespace StudentList.Model.Enums
 {
+    /// <summary>
+    /// Перечисление хранит формы обучения.
+    /// </summary>
     public enum FormOfEducation
     {
         FullTimeEducation,

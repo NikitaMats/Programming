@@ -1,33 +1,57 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using StudentList.Model.Enums;
-
-namespace StudentList.Model
+﻿namespace StudentList.Model
 {
+    /// <summary>
+    /// Класс отвечающий за хранение данных о студентах.
+    /// </summary>
     internal class Student
     {
+        /// <summary>
+        /// Id студента.
+        /// </summary>
         private int _id;
         
+        /// <summary>
+        /// Имя студента.
+        /// </summary>
         private string _name;
         
+        /// <summary>
+        /// Группа студента.
+        /// </summary>
         private string _group;
         
+        /// <summary>
+        /// Счетчик студентов.
+        /// </summary>
         private static int _allStudentCount;
 
+        /// <summary>
+        /// Создаёт экземпляр класса <see cref="Student"/>.
+        /// </summary>
         public Student()
         {
             _allStudentCount++;
             _id = _allStudentCount;
         }
-        
+
+        /// <summary>
+        /// Возвращает Id Студента.
+        /// </summary>
         public int Id { get; }
-        
+
+        /// <summary>
+        /// Возвращает и задаёт факультет студента.
+        /// </summary>
         public string Faculty { get; set; }
-        
+
+        /// <summary>
+        /// Возвращает и задаёт форму обучения студента.
+        /// </summary>
         public string EducationForm { get; set; }
 
+        /// <summary>
+        /// Возвращает и задаёт имя студента. Длинна не должна превышать 200 символов.
+        /// </summary>
         public string Name
         {
             get
@@ -41,6 +65,9 @@ namespace StudentList.Model
             }
         }
 
+        /// <summary>
+        /// Возвращает и задаёт имя студента. Длинна не должна превышать 10 символов.
+        /// </summary>
         public string Group
         {
             get
@@ -54,6 +81,9 @@ namespace StudentList.Model
             }
         }
 
+        /// <summary>
+        /// Создаёт экземпляр класса <see cref="Student"/>.
+        /// </summary>
         public Student(string name, string group,string faculty, string educationForm)
         {
             Name = name;

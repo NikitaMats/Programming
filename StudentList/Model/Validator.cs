@@ -1,11 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace StudentList.Model
 {
+    /// <summary>
+    /// Класс отвечающий за проверку входящих данных.
+    /// </summary>
     internal class Validator
     {
         /// <summary>
