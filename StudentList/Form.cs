@@ -11,8 +11,14 @@ namespace StudentList
 {
     public partial class MainForm : System.Windows.Forms.Form
     {
+        /// <summary>
+        /// Коллекция студентов.
+        /// </summary>
         private List<Student> _students = new List<Student>();
 
+        /// <summary>
+        /// Выбранный студент.
+        /// </summary>
         private Student _currentStudent;
 
 
@@ -32,14 +38,21 @@ namespace StudentList
             {
                 StudentsListBox.Items.Add(FormattedText(_students[i]));
             }
-           // _students = (List<Student>)readedProduct;
         }
 
+        /// <summary>
+        /// Возвращает форматированный текст для вывода в List Box. 
+        /// </summary>
+        /// <param name="student"> Студент для форматирования.</param>
+        /// /// <returns>Возвращает форматированный текст.</returns>
         private string FormattedText(Student student)
         {
             return $"{student.Name} " + $": {student.Group}";
         }
 
+        /// <summary>
+        ///Очищает информацию о студенте.
+        /// </summary>
         private void ClearStudentInfo()
         {
             StudentsListBox.Items.Clear();
@@ -48,6 +61,10 @@ namespace StudentList
             IdLabel.Text = "Record book number: ";
         }
 
+        /// <summary>
+        /// Обновляет информацию о студенте.
+        /// </summary>
+        /// <param name="student">Студент для обновления информации.</param>
         private void UpdateStudentInfo(Student student)
         {
             int indexSelectedStudent = StudentsListBox.SelectedIndex;
