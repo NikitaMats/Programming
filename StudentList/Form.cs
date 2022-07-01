@@ -114,7 +114,7 @@ namespace StudentList
 
         private void AddPictureBox_Click(object sender, EventArgs e)
         {
-            _currentStudent = new Student("Student Name", "Group", "Faculty", "FormOfEducation");
+            _currentStudent = new Student("Student Name", "Group", Faculties.Gryffindor, FormOfEducation.FullTimeEducation);
             _students.Add(_currentStudent);
             StudentsListBox.Items.Add(FormattedText(_currentStudent));
         }
@@ -173,7 +173,7 @@ namespace StudentList
 
             try
             {
-                _currentStudent.Faculty = FacultyComboBox.Text;
+                _currentStudent.Faculty = (Faculties)FacultyComboBox.SelectedItem;
             }
             catch
             {
@@ -190,7 +190,7 @@ namespace StudentList
 
             try
             {
-                _currentStudent.EducationForm = FormOfEducationComboBox.Text;
+                _currentStudent.EducationForm = (FormOfEducation)FormOfEducationComboBox.SelectedItem;
             }
             catch
             {

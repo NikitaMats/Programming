@@ -1,4 +1,7 @@
-﻿namespace StudentList.Model
+﻿using StudentList.Model.Enums;
+
+namespace StudentList.Model
+
 {
     /// <summary>
     /// Класс отвечающий за хранение данных о студентах.
@@ -8,7 +11,7 @@
         /// <summary>
         /// Id студента.
         /// </summary>
-        private int _id;
+        private readonly int _id;
         
         /// <summary>
         /// Имя студента.
@@ -35,19 +38,19 @@
         }
 
         /// <summary>
-        /// Возвращает Id Студента.
+        /// Возвращает и задает Id Студента.
         /// </summary>
-        public int Id { get; }
+        public int Id { get; set; }
 
         /// <summary>
         /// Возвращает и задаёт факультет студента.
         /// </summary>
-        public string Faculty { get; set; }
+        public Faculties Faculty { get; set; }
 
         /// <summary>
         /// Возвращает и задаёт форму обучения студента.
         /// </summary>
-        public string EducationForm { get; set; }
+        public FormOfEducation EducationForm { get; set; }
 
         /// <summary>
         /// Возвращает и задаёт имя студента. Длинна не должна превышать 200 символов.
@@ -84,7 +87,7 @@
         /// <summary>
         /// Создаёт экземпляр класса <see cref="Student"/>.
         /// </summary>
-        public Student(string name, string group,string faculty, string educationForm)
+        public Student(string name, string group, Faculties faculty, FormOfEducation educationForm)
         {
             Name = name;
             Group = group;
