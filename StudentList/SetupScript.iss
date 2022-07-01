@@ -19,7 +19,6 @@ DisableProgramGroupPage=yes
 ; Uncomment the following line to run in non administrative install mode (install for current user only.)
 ;PrivilegesRequired=lowest
 OutputBaseFilename=Setup
-SetupIconFile=Resources\List.png
 Compression=lzma
 SolidCompression=yes
 WizardStyle=modern

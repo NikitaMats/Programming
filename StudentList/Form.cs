@@ -22,12 +22,12 @@ namespace StudentList
         /// <summary>
         /// Цвет ошибки.
         /// </summary>
-        private Color _errorColor = Color.LightPink;
+        private readonly Color _errorColor = Color.LightPink;
 
         /// <summary>
         /// Цвет окна без ошибок.
         /// </summary>
-        private Color _normalColor = Color.White;
+        private readonly Color _normalColor = Color.White;
 
         public MainForm()
         {
@@ -133,12 +133,11 @@ namespace StudentList
 
             _students.RemoveAt(indexSelectedStudent);
 
-            ClearStudentInfo();
+            StudentsListBox.Items.Clear();
 
-            foreach (var student in _students)
+            for (int i = 0; i <= _students.Count - 1; i++)
             {
-                StudentsListBox.Items.Add(FormattedText(student));
-                StudentsListBox.SelectedIndex = 0;
+                StudentsListBox.Items.Add(FormattedText(_students[i]));
             }
         }
 
