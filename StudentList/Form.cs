@@ -4,8 +4,6 @@ using System.Drawing;
 using System.Windows.Forms;
 using StudentList.Model;
 using StudentList.Model.Enums;
-using Newtonsoft.Json;
-using System.IO;
 
 namespace StudentList
 {
@@ -21,6 +19,15 @@ namespace StudentList
         /// </summary>
         private Student _currentStudent;
 
+        /// <summary>
+        /// Цвет ошибки.
+        /// </summary>
+        private Color _errorColor = Color.LightPink;
+
+        /// <summary>
+        /// Цвет окна без ошибок.
+        /// </summary>
+        private Color _normalColor = Color.White;
 
         public MainForm()
         {
@@ -81,7 +88,6 @@ namespace StudentList
 
         private void StudentSort()
         {
-            //string currentstudent = FormattedText(_currentStudent);
             _students.Sort(delegate (Student student1, Student student2)
             { return student1.Name.CompareTo(student2.Name); });
             StudentsListBox.Items.Clear();
@@ -105,11 +111,11 @@ namespace StudentList
             }
             catch
             {
-                NameTextBox.BackColor = Color.LightPink;
+                NameTextBox.BackColor = _errorColor;
                 return;
             }
 
-            NameTextBox.BackColor = Color.White;
+            NameTextBox.BackColor = _normalColor;
         }
 
         private void AddPictureBox_Click(object sender, EventArgs e)
@@ -160,11 +166,11 @@ namespace StudentList
             }
             catch
             {
-                GroupTextBox.BackColor = Color.LightPink;
+                GroupTextBox.BackColor = _errorColor;
                 return;
             }
 
-            GroupTextBox.BackColor = Color.White;
+            GroupTextBox.BackColor = _normalColor;
         }
 
         private void FacultyComboBox_SelectedIndexChanged(object sender, EventArgs e)
@@ -177,11 +183,11 @@ namespace StudentList
             }
             catch
             {
-                FacultyComboBox.BackColor = Color.LightPink;
+                FacultyComboBox.BackColor = _errorColor;
                 return;
             }
 
-            FacultyComboBox.BackColor = Color.White;
+            FacultyComboBox.BackColor = _normalColor;
         }
 
         private void FormOfEducationComboBox_SelectedIndexChanged(object sender, EventArgs e)
@@ -194,11 +200,11 @@ namespace StudentList
             }
             catch
             {
-                FormOfEducationComboBox.BackColor = Color.LightPink;
+                FormOfEducationComboBox.BackColor = _errorColor;
                 return;
             }
 
-            FormOfEducationComboBox.BackColor = Color.White;
+            FormOfEducationComboBox.BackColor = _normalColor;
         }
 
         private void MainForm_FormClosed(object sender, FormClosedEventArgs e)
