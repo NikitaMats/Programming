@@ -86,6 +86,9 @@ namespace StudentList
             StudentsListBox.Items[indexSelectedStudent] = FormattedText(student);
         }
 
+        /// <summary>
+        /// Сортировка списка студентов.
+        /// </summary>
         private void StudentSort()
         {
             _students.Sort(delegate (Student student1, Student student2)
@@ -133,7 +136,7 @@ namespace StudentList
 
             _students.RemoveAt(indexSelectedStudent);
 
-            StudentsListBox.Items.Clear();
+            ClearStudentInfo();
 
             for (int i = 0; i <= _students.Count - 1; i++)
             {
