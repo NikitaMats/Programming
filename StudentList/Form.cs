@@ -30,13 +30,18 @@ namespace StudentList
 
             FormOfEducationComboBox.DataSource = Enum.GetValues(typeof(FormOfEducation));
 
-            var file = File.ReadAllText(@"D:\text.txt");
-
-            _students = JsonConvert.DeserializeObject<List<Student>>(file);
-
-            for(int i = 0; i <= _students.Count - 1; i++)
+            try
             {
-                StudentsListBox.Items.Add(FormattedText(_students[i]));
+                _students = Serializer.LoadData();
+                for (int i = 0; i <= _students.Count - 1; i++)
+                {
+                    StudentsListBox.Items.Add(FormattedText(_students[i]));
+                }
+            }
+            catch
+            {
+                Serializer.CreateFile();
+                _students = new List<Student>();
             }
         }
 
@@ -74,6 +79,20 @@ namespace StudentList
             StudentsListBox.Items[indexSelectedStudent] = FormattedText(student);
         }
 
+        private void StudentSort()
+        {
+            //string currentstudent = FormattedText(_currentStudent);
+            _students.Sort(delegate (Student student1, Student student2)
+            { return student1.Name.CompareTo(student2.Name); });
+            StudentsListBox.Items.Clear();
+            for (int i = 0; i <= _students.Count - 1; i++)
+            {
+                StudentsListBox.Items.Add(FormattedText(_students[i]));
+            }
+            StudentsListBox.SelectedIndex = _students.IndexOf(_currentStudent);
+
+        }
+
         private void NameTextBox_TextChanged(object sender, EventArgs e)
         {
             if (StudentsListBox.SelectedIndex == -1) return;
@@ -82,6 +101,7 @@ namespace StudentList
             {
                 _currentStudent.Name = NameTextBox.Text;
                 UpdateStudentInfo(_currentStudent);
+                StudentSort();
             }
             catch
             {
@@ -183,8 +203,7 @@ namespace StudentList
 
         private void MainForm_FormClosed(object sender, FormClosedEventArgs e)
         {
-            var jsonObject = JsonConvert.SerializeObject(_students);
-            File.WriteAllText(@"D:\text.txt", jsonObject);
+            Serializer.WriteData(_students);
 
         }
     }

@@ -63,9 +63,9 @@ namespace StudentList.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap rectangle_add_24x24 {
+        internal static System.Drawing.Bitmap Students_add_24x24 {
             get {
-                object obj = ResourceManager.GetObject("rectangle_add_24x24", resourceCulture);
+                object obj = ResourceManager.GetObject("Students_add_24x24", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -73,9 +73,9 @@ namespace StudentList.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap rectangle_remove_24x24 {
+        internal static System.Drawing.Bitmap Students_add_24x241 {
             get {
-                object obj = ResourceManager.GetObject("rectangle_remove_24x24", resourceCulture);
+                object obj = ResourceManager.GetObject("Students_add_24x241", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -111,6 +111,7 @@
             // 
             // FacultyComboBox
             // 
+            this.FacultyComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.FacultyComboBox.FormattingEnabled = true;
             this.FacultyComboBox.Location = new System.Drawing.Point(309, 128);
             this.FacultyComboBox.Name = "FacultyComboBox";
@@ -139,7 +140,7 @@
             // 
             // DeletePictureBox
             // 
-            this.DeletePictureBox.BackgroundImage = global::StudentList.Properties.Resources.rectangle_remove_24x24;
+            this.DeletePictureBox.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("DeletePictureBox.BackgroundImage")));
             this.DeletePictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.DeletePictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.DeletePictureBox.Location = new System.Drawing.Point(376, 209);
@@ -151,7 +152,7 @@
             // 
             // AddPictureBox
             // 
-            this.AddPictureBox.BackgroundImage = global::StudentList.Properties.Resources.rectangle_add_24x24;
+            this.AddPictureBox.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("AddPictureBox.BackgroundImage")));
             this.AddPictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.AddPictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.AddPictureBox.Location = new System.Drawing.Point(309, 209);
