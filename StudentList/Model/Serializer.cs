@@ -13,7 +13,7 @@ namespace StudentList.Model
         /// <summary>
         /// Путь к системной папке AppData.
         /// </summary>
-        private static string DataPath = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + @"\StudentList_571-1_Matskevich"; //"/StudentList_Test.txt"
+        private static string DataPath = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + @"\StudentList_571-1_Matskevich";
 
         /// <summary>
         /// Метод отвечающий за создание файла в системной папке.
