@@ -11,7 +11,7 @@ namespace ObjectOrientedPractics.Model
         /// <summary>
         /// Счетчик покупателей.
         /// </summary>
-        private static int _allItemsCount;
+        private static int _allCustomersCount;
 
         /// <summary>
         /// Индивидуальный номер покупателя.
@@ -33,8 +33,8 @@ namespace ObjectOrientedPractics.Model
         /// </summary>
         public Customer()
         {
-            _allItemsCount++;
-            _id = _allItemsCount;
+            _allCustomersCount++;
+            _id = _allCustomersCount;
         }
 
         /// <summary>
@@ -44,8 +44,8 @@ namespace ObjectOrientedPractics.Model
         /// <param name="address">Информация о товаре.</param>
         public Customer(string fullname, string address)
         {
-            _allItemsCount++;
-            Id = _allItemsCount;
+            _allCustomersCount++;
+            Id = _allCustomersCount;
             Fullname = fullname;
             Address = address;
         }
