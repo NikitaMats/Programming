@@ -49,6 +49,7 @@
             this.CustomerAddressTextBox.Name = "CustomerAddressTextBox";
             this.CustomerAddressTextBox.Size = new System.Drawing.Size(441, 72);
             this.CustomerAddressTextBox.TabIndex = 32;
+            this.CustomerAddressTextBox.TextChanged += new System.EventHandler(this.CustomerAddressTextBox_TextChanged);
             // 
             // label7
             // 
@@ -76,6 +77,7 @@
             this.CustomerFullNameTextBox.Name = "CustomerFullNameTextBox";
             this.CustomerFullNameTextBox.Size = new System.Drawing.Size(363, 22);
             this.CustomerFullNameTextBox.TabIndex = 29;
+            this.CustomerFullNameTextBox.TextChanged += new System.EventHandler(this.CustomerFullNameTextBox_TextChanged);
             // 
             // label8
             // 
@@ -126,6 +128,7 @@
             this.CustomerAddButton.TabIndex = 24;
             this.CustomerAddButton.Text = "Add";
             this.CustomerAddButton.UseVisualStyleBackColor = true;
+            this.CustomerAddButton.Click += new System.EventHandler(this.CustomerAddButton_Click);
             // 
             // CustomersListBox
             // 
@@ -136,6 +139,7 @@
             this.CustomersListBox.Name = "CustomersListBox";
             this.CustomersListBox.Size = new System.Drawing.Size(257, 356);
             this.CustomersListBox.TabIndex = 23;
+            this.CustomersListBox.SelectedIndexChanged += new System.EventHandler(this.CustomersListBox_SelectedIndexChanged);
             // 
             // label11
             // 

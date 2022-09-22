@@ -133,8 +133,8 @@ namespace ObjectOrientedPractics.View.Tabs
         {
             if (ItemsListBox.SelectedItem == null) return;
 
-            int indexSelectedStudent = ItemsListBox.SelectedIndex;
-            _currentItem = _items[indexSelectedStudent];
+            int indexSelectedItem = ItemsListBox.SelectedIndex;
+            _currentItem = _items[indexSelectedItem];
             ItemNameTextBox.Text = _currentItem.Name;
             ItemInfoTextBox.Text = _currentItem.Info;
             ItemCostTextBox.Text = _currentItem.Cost.ToString();
