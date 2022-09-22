@@ -46,7 +46,7 @@
             // ItemInfoTextBox
             // 
             this.ItemInfoTextBox.Location = new System.Drawing.Point(293, 234);
-            this.ItemInfoTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ItemInfoTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.ItemInfoTextBox.Multiline = true;
             this.ItemInfoTextBox.Name = "ItemInfoTextBox";
             this.ItemInfoTextBox.Size = new System.Drawing.Size(441, 150);
@@ -66,7 +66,7 @@
             // ItemNameTextBox
             // 
             this.ItemNameTextBox.Location = new System.Drawing.Point(293, 124);
-            this.ItemNameTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ItemNameTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.ItemNameTextBox.Multiline = true;
             this.ItemNameTextBox.Name = "ItemNameTextBox";
             this.ItemNameTextBox.Size = new System.Drawing.Size(441, 72);
@@ -86,7 +86,7 @@
             // ItemIDTextBox
             // 
             this.ItemIDTextBox.Location = new System.Drawing.Point(339, 37);
-            this.ItemIDTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ItemIDTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.ItemIDTextBox.Name = "ItemIDTextBox";
             this.ItemIDTextBox.ReadOnly = true;
             this.ItemIDTextBox.Size = new System.Drawing.Size(132, 22);
@@ -95,7 +95,7 @@
             // ItemCostTextBox
             // 
             this.ItemCostTextBox.Location = new System.Drawing.Point(339, 69);
-            this.ItemCostTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ItemCostTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.ItemCostTextBox.Name = "ItemCostTextBox";
             this.ItemCostTextBox.Size = new System.Drawing.Size(132, 22);
             this.ItemCostTextBox.TabIndex = 20;
@@ -140,6 +140,7 @@
             this.ItemDeleteButton.TabIndex = 16;
             this.ItemDeleteButton.Text = "Delete";
             this.ItemDeleteButton.UseVisualStyleBackColor = true;
+            this.ItemDeleteButton.Click += new System.EventHandler(this.ItemDeleteButton_Click);
             // 
             // ItemAddButtom
             // 
@@ -189,7 +190,7 @@
             this.Controls.Add(this.ItemAddButtom);
             this.Controls.Add(this.ItemsListBox);
             this.Controls.Add(this.Label1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "ItemsTabControl";
             this.Size = new System.Drawing.Size(751, 433);
             this.ResumeLayout(false);

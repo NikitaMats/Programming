@@ -58,13 +58,13 @@ namespace ObjectOrientedPractics.View.Tabs
         /// Обновляет информацию о товаре.
         /// </summary>
         /// <param name="student">Товар для обновления информации.</param>
-        private void UpdateStudentInfo(Item item)
+        private void UpdateItemInfo(Item item)
         {
-            int indexSelectedStudent = ItemsListBox.SelectedIndex;
+            int indexSelectedItem = ItemsListBox.SelectedIndex;
 
-            if (indexSelectedStudent == -1) return;
+            if (indexSelectedItem == -1) return;
 
-            ItemsListBox.Items[indexSelectedStudent] = FormattedText(item);
+            ItemsListBox.Items[indexSelectedItem] = FormattedText(item);
         }
 
         private void ItemNameTextBox_TextChanged(object sender, EventArgs e)
@@ -74,7 +74,7 @@ namespace ObjectOrientedPractics.View.Tabs
             try
             {
                 _currentItem.Name = ItemNameTextBox.Text;
-                UpdateStudentInfo(_currentItem);
+                UpdateItemInfo(_currentItem);
             }
             catch
             {
@@ -92,7 +92,7 @@ namespace ObjectOrientedPractics.View.Tabs
             try
             {
                 _currentItem.Cost = Convert.ToDouble(ItemCostTextBox.Text);
-                UpdateStudentInfo(_currentItem);
+                UpdateItemInfo(_currentItem);
             }
             catch
             {
@@ -110,7 +110,7 @@ namespace ObjectOrientedPractics.View.Tabs
             try
             {
                 _currentItem.Info = ItemInfoTextBox.Text;
-                UpdateStudentInfo(_currentItem);
+                UpdateItemInfo(_currentItem);
             }
             catch
             {
@@ -139,6 +139,22 @@ namespace ObjectOrientedPractics.View.Tabs
             ItemInfoTextBox.Text = _currentItem.Info;
             ItemCostTextBox.Text = _currentItem.Cost.ToString();
             ItemIDTextBox.Text = _currentItem.Id.ToString();
+        }
+
+        private void ItemDeleteButton_Click(object sender, EventArgs e)
+        {
+            int indexSelectedItem = ItemsListBox.SelectedIndex;
+
+            if (indexSelectedItem == -1) return;
+
+            _items.RemoveAt(indexSelectedItem);
+
+            ClearItemInfo();
+
+            for (int i = 0; i <= _items.Count - 1; i++)
+            {
+                ItemsListBox.Items.Add(FormattedText(_items[i]));
+            }
         }
     }
 }

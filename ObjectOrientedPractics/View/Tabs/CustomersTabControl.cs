@@ -51,7 +51,7 @@ namespace ObjectOrientedPractics.View.Tabs
         /// <summary>
         ///Очищает информацию о покупателе.
         /// </summary>
-        private void ClearItemInfo()
+        private void ClearCustomerInfo()
         {
             CustomersListBox.Items.Clear();
             CustomerIDTextBox.Clear();
@@ -62,14 +62,14 @@ namespace ObjectOrientedPractics.View.Tabs
         /// <summary>
         /// Обновляет информацию о покупателе.
         /// </summary>
-        /// <param name="student">Покупатель для обновления информации.</param>
-        private void UpdateStudentInfo(Customer сustomer)
+        /// <param name="сustomer">Покупатель для обновления информации.</param>
+        private void UpdateItemInfo(Customer сustomer)
         {
-            int indexSelectedStudent = CustomersListBox.SelectedIndex;
+            int indexSelectedCustomer = CustomersListBox.SelectedIndex;
 
-            if (indexSelectedStudent == -1) return;
+            if (indexSelectedCustomer == -1) return;
 
-            CustomersListBox.Items[indexSelectedStudent] = FormattedText(сustomer);
+            CustomersListBox.Items[indexSelectedCustomer] = FormattedText(сustomer);
         }
 
         private void CustomerFullNameTextBox_TextChanged(object sender, EventArgs e)
@@ -79,7 +79,7 @@ namespace ObjectOrientedPractics.View.Tabs
             try
             {
                 _currentCustomer.Fullname = CustomerFullNameTextBox.Text;
-                UpdateStudentInfo(_currentCustomer);
+                UpdateItemInfo(_currentCustomer);
             }
             catch
             {
@@ -97,7 +97,7 @@ namespace ObjectOrientedPractics.View.Tabs
             try
             {
                 _currentCustomer.Address = CustomerAddressTextBox.Text;
-                UpdateStudentInfo(_currentCustomer);
+                UpdateItemInfo(_currentCustomer);
             }
             catch
             {
@@ -125,6 +125,22 @@ namespace ObjectOrientedPractics.View.Tabs
             CustomerFullNameTextBox.Text = _currentCustomer.Fullname;
             CustomerAddressTextBox.Text = _currentCustomer.Address;
  
+        }
+
+        private void CustomerDeleteButton_Click(object sender, EventArgs e)
+        {
+            int indexSelectedCustomer = CustomersListBox.SelectedIndex;
+
+            if (indexSelectedCustomer == -1) return;
+
+            _сustomers.RemoveAt(indexSelectedCustomer);
+
+            ClearCustomerInfo();
+
+            for (int i = 0; i <= _сustomers.Count - 1; i++)
+            {
+                CustomersListBox.Items.Add(FormattedText(_сustomers[i]));
+            }
         }
     }
 }
