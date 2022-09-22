@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using ObjectOrientedPractics.Services;
 
 namespace ObjectOrientedPractics.Model
 {
@@ -76,6 +77,7 @@ namespace ObjectOrientedPractics.Model
             }
             set
             {
+                ValueValidator.AssertCountSymbolsInRange(nameof(Name), 0, 200, value);
                 _name = value;
             }
         }
@@ -91,6 +93,7 @@ namespace ObjectOrientedPractics.Model
             }
             set
             {
+                ValueValidator.AssertCountSymbolsInRange(nameof(Info), 0, 1000, value);
                 _info = value;
             }
         }
@@ -106,6 +109,7 @@ namespace ObjectOrientedPractics.Model
             }
             set
             {
+                ValueValidator.AssertValueInRange(nameof(Info), 0, 100000, value);
                 _cost = value;
             }
         }
