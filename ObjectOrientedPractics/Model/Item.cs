@@ -12,6 +12,11 @@ namespace ObjectOrientedPractics.Model
     internal class Item
     {
         /// <summary>
+        /// Счетчик товаров.
+        /// </summary>
+        private static int _allItemsCount;
+
+        /// <summary>
         /// Индивидуальный номер товара.
         /// </summary>
         private readonly int _id;
@@ -30,11 +35,6 @@ namespace ObjectOrientedPractics.Model
         /// Стоимость товара.
         /// </summary>
         private double _cost;
-
-        /// <summary>
-        /// Счетчик товаров.
-        /// </summary>
-        private static int _allItemsCount;
 
         /// <summary>
         /// Создаёт экземпляр класса <see cref="Item"/>.
