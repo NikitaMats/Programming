@@ -43,78 +43,86 @@
             // 
             // CustomerAddressTextBox
             // 
-            this.CustomerAddressTextBox.Location = new System.Drawing.Point(220, 101);
+            this.CustomerAddressTextBox.Location = new System.Drawing.Point(293, 124);
+            this.CustomerAddressTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.CustomerAddressTextBox.Multiline = true;
             this.CustomerAddressTextBox.Name = "CustomerAddressTextBox";
-            this.CustomerAddressTextBox.Size = new System.Drawing.Size(332, 59);
+            this.CustomerAddressTextBox.Size = new System.Drawing.Size(441, 72);
             this.CustomerAddressTextBox.TabIndex = 32;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(217, 85);
+            this.label7.Location = new System.Drawing.Point(289, 105);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(48, 13);
+            this.label7.Size = new System.Drawing.Size(61, 16);
             this.label7.TabIndex = 31;
             this.label7.Text = "Address:";
             // 
             // CustomerIDTextBox
             // 
-            this.CustomerIDTextBox.Location = new System.Drawing.Point(279, 30);
+            this.CustomerIDTextBox.Location = new System.Drawing.Point(372, 37);
+            this.CustomerIDTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.CustomerIDTextBox.Name = "CustomerIDTextBox";
-            this.CustomerIDTextBox.Size = new System.Drawing.Size(100, 20);
+            this.CustomerIDTextBox.ReadOnly = true;
+            this.CustomerIDTextBox.Size = new System.Drawing.Size(132, 22);
             this.CustomerIDTextBox.TabIndex = 30;
             // 
             // CustomerFullNameTextBox
             // 
-            this.CustomerFullNameTextBox.Location = new System.Drawing.Point(279, 56);
+            this.CustomerFullNameTextBox.Location = new System.Drawing.Point(372, 69);
+            this.CustomerFullNameTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.CustomerFullNameTextBox.Name = "CustomerFullNameTextBox";
-            this.CustomerFullNameTextBox.Size = new System.Drawing.Size(273, 20);
+            this.CustomerFullNameTextBox.Size = new System.Drawing.Size(363, 22);
             this.CustomerFullNameTextBox.TabIndex = 29;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(217, 59);
+            this.label8.Location = new System.Drawing.Point(289, 73);
+            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(57, 13);
+            this.label8.Size = new System.Drawing.Size(71, 16);
             this.label8.TabIndex = 28;
             this.label8.Text = "Full Name:";
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(217, 33);
+            this.label9.Location = new System.Drawing.Point(289, 41);
+            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(21, 13);
+            this.label9.Size = new System.Drawing.Size(23, 16);
             this.label9.TabIndex = 27;
             this.label9.Text = "ID:";
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(217, 6);
+            this.label10.Location = new System.Drawing.Point(289, 7);
+            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(99, 13);
+            this.label10.Size = new System.Drawing.Size(124, 16);
             this.label10.TabIndex = 26;
             this.label10.Text = "Selected Customer:";
             // 
             // CustomerDeleteButton
             // 
-            this.CustomerDeleteButton.Location = new System.Drawing.Point(115, 317);
-            this.CustomerDeleteButton.Margin = new System.Windows.Forms.Padding(2);
+            this.CustomerDeleteButton.Location = new System.Drawing.Point(153, 390);
+            this.CustomerDeleteButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.CustomerDeleteButton.Name = "CustomerDeleteButton";
-            this.CustomerDeleteButton.Size = new System.Drawing.Size(82, 26);
+            this.CustomerDeleteButton.Size = new System.Drawing.Size(109, 32);
             this.CustomerDeleteButton.TabIndex = 25;
             this.CustomerDeleteButton.Text = "Delete";
             this.CustomerDeleteButton.UseVisualStyleBackColor = true;
             // 
             // CustomerAddButton
             // 
-            this.CustomerAddButton.Location = new System.Drawing.Point(14, 317);
-            this.CustomerAddButton.Margin = new System.Windows.Forms.Padding(2);
+            this.CustomerAddButton.Location = new System.Drawing.Point(19, 390);
+            this.CustomerAddButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.CustomerAddButton.Name = "CustomerAddButton";
-            this.CustomerAddButton.Size = new System.Drawing.Size(82, 26);
+            this.CustomerAddButton.Size = new System.Drawing.Size(109, 32);
             this.CustomerAddButton.TabIndex = 24;
             this.CustomerAddButton.Text = "Add";
             this.CustomerAddButton.UseVisualStyleBackColor = true;
@@ -122,25 +130,25 @@
             // CustomersListBox
             // 
             this.CustomersListBox.FormattingEnabled = true;
-            this.CustomersListBox.Location = new System.Drawing.Point(8, 23);
-            this.CustomersListBox.Margin = new System.Windows.Forms.Padding(2);
+            this.CustomersListBox.ItemHeight = 16;
+            this.CustomersListBox.Location = new System.Drawing.Point(11, 28);
+            this.CustomersListBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.CustomersListBox.Name = "CustomersListBox";
-            this.CustomersListBox.Size = new System.Drawing.Size(194, 290);
+            this.CustomersListBox.Size = new System.Drawing.Size(257, 356);
             this.CustomersListBox.TabIndex = 23;
             // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(6, 6);
-            this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label11.Location = new System.Drawing.Point(8, 7);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(59, 13);
+            this.label11.Size = new System.Drawing.Size(74, 16);
             this.label11.TabIndex = 22;
             this.label11.Text = "Customers:";
             // 
             // CustomersTabControl
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.CustomerAddressTextBox);
             this.Controls.Add(this.label7);
@@ -153,8 +161,9 @@
             this.Controls.Add(this.CustomerAddButton);
             this.Controls.Add(this.CustomersListBox);
             this.Controls.Add(this.label11);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "CustomersTabControl";
-            this.Size = new System.Drawing.Size(563, 352);
+            this.Size = new System.Drawing.Size(751, 433);
             this.ResumeLayout(false);
             this.PerformLayout();
 

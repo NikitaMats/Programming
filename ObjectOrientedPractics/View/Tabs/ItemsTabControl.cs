@@ -1,11 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using ObjectOrientedPractics.Model;
 
@@ -131,6 +126,19 @@ namespace ObjectOrientedPractics.View.Tabs
             _currentItem = new Item(ItemNameTextBox.Text, ItemInfoTextBox.Text, Convert.ToDouble(ItemCostTextBox.Text));
             _items.Add(_currentItem);
             ItemsListBox.Items.Add(FormattedText(_currentItem));
+            ItemIDTextBox.Text = _currentItem.Id.ToString();
+        }
+
+        private void ItemsListBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (ItemsListBox.SelectedItem == null) return;
+
+            int indexSelectedStudent = ItemsListBox.SelectedIndex;
+            _currentItem = _items[indexSelectedStudent];
+            ItemNameTextBox.Text = _currentItem.Name;
+            ItemInfoTextBox.Text = _currentItem.Info;
+            ItemCostTextBox.Text = _currentItem.Cost.ToString();
+            ItemIDTextBox.Text = _currentItem.Id.ToString();
         }
     }
 }

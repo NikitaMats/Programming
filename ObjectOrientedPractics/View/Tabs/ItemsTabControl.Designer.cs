@@ -88,6 +88,7 @@
             this.ItemIDTextBox.Location = new System.Drawing.Point(339, 37);
             this.ItemIDTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.ItemIDTextBox.Name = "ItemIDTextBox";
+            this.ItemIDTextBox.ReadOnly = true;
             this.ItemIDTextBox.Size = new System.Drawing.Size(132, 22);
             this.ItemIDTextBox.TabIndex = 21;
             // 
@@ -160,6 +161,7 @@
             this.ItemsListBox.Name = "ItemsListBox";
             this.ItemsListBox.Size = new System.Drawing.Size(257, 356);
             this.ItemsListBox.TabIndex = 14;
+            this.ItemsListBox.SelectedIndexChanged += new System.EventHandler(this.ItemsListBox_SelectedIndexChanged);
             // 
             // Label1
             // 
