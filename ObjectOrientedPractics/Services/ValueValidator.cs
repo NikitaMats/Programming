@@ -33,7 +33,7 @@ namespace ObjectOrientedPractics.Services
         /// <param name="min">Минимальное значение.</param>
         /// <param name="max">Максимальное значение.</param>
         /// <param name="value">Вещественное число.</param>
-        /// <exception cref="ArgumentException">Выбрасывается, когда количество символов строки не входит в диапазон.</exception>
+        /// <exception cref="ArgumentException">Выбрасывается, когда количество символов переменной не входит в диапазон.</exception>
         public static void AssertValueInRange(string FunctionName, int min, int max, double value)
         {
             if (!(value >= min && value <= max))

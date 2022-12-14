@@ -28,8 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.CustomerAddressTextBox = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
             this.CustomerIDTextBox = new System.Windows.Forms.TextBox();
             this.CustomerFullNameTextBox = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
@@ -41,41 +39,21 @@
             this.label11 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // CustomerAddressTextBox
-            // 
-            this.CustomerAddressTextBox.Location = new System.Drawing.Point(293, 124);
-            this.CustomerAddressTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.CustomerAddressTextBox.Multiline = true;
-            this.CustomerAddressTextBox.Name = "CustomerAddressTextBox";
-            this.CustomerAddressTextBox.Size = new System.Drawing.Size(441, 72);
-            this.CustomerAddressTextBox.TabIndex = 32;
-            this.CustomerAddressTextBox.TextChanged += new System.EventHandler(this.CustomerAddressTextBox_TextChanged);
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(289, 105);
-            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(61, 16);
-            this.label7.TabIndex = 31;
-            this.label7.Text = "Address:";
-            // 
             // CustomerIDTextBox
             // 
-            this.CustomerIDTextBox.Location = new System.Drawing.Point(372, 37);
-            this.CustomerIDTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.CustomerIDTextBox.Location = new System.Drawing.Point(362, 37);
+            this.CustomerIDTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.CustomerIDTextBox.Name = "CustomerIDTextBox";
             this.CustomerIDTextBox.ReadOnly = true;
-            this.CustomerIDTextBox.Size = new System.Drawing.Size(132, 22);
+            this.CustomerIDTextBox.Size = new System.Drawing.Size(142, 22);
             this.CustomerIDTextBox.TabIndex = 30;
             // 
             // CustomerFullNameTextBox
             // 
-            this.CustomerFullNameTextBox.Location = new System.Drawing.Point(372, 69);
-            this.CustomerFullNameTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.CustomerFullNameTextBox.Location = new System.Drawing.Point(362, 69);
+            this.CustomerFullNameTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.CustomerFullNameTextBox.Name = "CustomerFullNameTextBox";
-            this.CustomerFullNameTextBox.Size = new System.Drawing.Size(363, 22);
+            this.CustomerFullNameTextBox.Size = new System.Drawing.Size(373, 22);
             this.CustomerFullNameTextBox.TabIndex = 29;
             this.CustomerFullNameTextBox.TextChanged += new System.EventHandler(this.CustomerFullNameTextBox_TextChanged);
             // 
@@ -155,8 +133,6 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.CustomerAddressTextBox);
-            this.Controls.Add(this.label7);
             this.Controls.Add(this.CustomerIDTextBox);
             this.Controls.Add(this.CustomerFullNameTextBox);
             this.Controls.Add(this.label8);
@@ -166,7 +142,7 @@
             this.Controls.Add(this.CustomerAddButton);
             this.Controls.Add(this.CustomersListBox);
             this.Controls.Add(this.label11);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "CustomersTabControl";
             this.Size = new System.Drawing.Size(751, 433);
             this.ResumeLayout(false);
@@ -175,9 +151,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.TextBox CustomerAddressTextBox;
-        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox CustomerIDTextBox;
         private System.Windows.Forms.TextBox CustomerFullNameTextBox;
         private System.Windows.Forms.Label label8;

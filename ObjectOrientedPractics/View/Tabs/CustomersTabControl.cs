@@ -56,7 +56,6 @@ namespace ObjectOrientedPractics.View.Tabs
             CustomersListBox.Items.Clear();
             CustomerIDTextBox.Clear();
             CustomerFullNameTextBox.Clear();
-            CustomerAddressTextBox.Clear();
         }
 
         /// <summary>
@@ -90,27 +89,10 @@ namespace ObjectOrientedPractics.View.Tabs
             CustomerFullNameTextBox.BackColor = _normalColor;
         }
 
-        private void CustomerAddressTextBox_TextChanged(object sender, EventArgs e)
-        {
-            if (CustomersListBox.SelectedIndex == -1) return;
-
-            try
-            {
-                _currentCustomer.Address = CustomerAddressTextBox.Text;
-                UpdateItemInfo(_currentCustomer);
-            }
-            catch
-            {
-                CustomerAddressTextBox.BackColor = _errorColor;
-                return;
-            }
-
-            CustomerAddressTextBox.BackColor = _normalColor;
-        }
 
         private void CustomerAddButton_Click(object sender, EventArgs e)
         {
-            _currentCustomer = new Customer(CustomerFullNameTextBox.Text, CustomerAddressTextBox.Text);
+            _currentCustomer = new Customer(CustomerFullNameTextBox.Text);
             _сustomers.Add(_currentCustomer);
             CustomersListBox.Items.Add(FormattedText(_currentCustomer));
             CustomerIDTextBox.Text = _currentCustomer.Id.ToString();
@@ -123,7 +105,6 @@ namespace ObjectOrientedPractics.View.Tabs
             int indexSelectedCustomer = CustomersListBox.SelectedIndex;
             _currentCustomer = _сustomers[indexSelectedCustomer];
             CustomerFullNameTextBox.Text = _currentCustomer.Fullname;
-            CustomerAddressTextBox.Text = _currentCustomer.Address;
  
         }
 

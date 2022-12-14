@@ -123,7 +123,7 @@ namespace ObjectOrientedPractics.View.Tabs
 
         private void ItemAddButtom_Click(object sender, EventArgs e)
         {
-            _currentItem = new Item(ItemNameTextBox.Text, ItemInfoTextBox.Text, Convert.ToDouble(ItemCostTextBox.Text));
+            _currentItem = new Item("Name", "Info", 1);
             _items.Add(_currentItem);
             ItemsListBox.Items.Add(FormattedText(_currentItem));
             ItemIDTextBox.Text = _currentItem.Id.ToString();
